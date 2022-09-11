@@ -17,19 +17,17 @@ O objetivo geral deste trabalho é a criação de um portal para gestão finance
 
 Como objetivos específicos, podemos ressaltar:
 
-●	Permitir ao usuário adicionar despesas fixas e variáveis;
-●	Fornecer gerenciamento de reserva de emergência;
-●	Possibilitar planejamento de gastos e metas de rendimento; 
-●	Criar gráficos que mostrem o percentual de crescimento mensal.
+* Permitir ao usuário adicionar despesas fixas e variáveis;
+* Fornecer gerenciamento de reserva de emergência;
+* Possibilitar planejamento de gastos e metas de rendimento; 
+* Criar gráficos que mostrem o percentual de crescimento mensal.
 
 ## Justificativa
 
-No Brasil, a gestão financeira pessoal ainda é um senário muito distante por conta de pouquíssimos Brasileiros terem tido acesso a educação financeira.
-
-Adicional a isso notamos que uma parcela da população chega a tentar realizar por um tempo a gestão de suas finanças, mas ao ver as diversas dificuldades que anotar tudo com papel e caneta e sem saber ao certo o que estão fazendo, tendem a desistir logo nos primeiros meses.
+Os brasileiros não possuem acesso a educação financeira, o que dificulta a realização de uma gestão eficaz. 
 
 ## Público-Alvo
 
-Todas as pessoas podem se beneficiar ao realizar a gestão de suas finanças, desde crianças que querem juntar um dinheiro para comprar um brinquedo novo até pessoas aposentadas que estão planejando uma viagem e principalmente os jovens trabalhadores que desejam ter uma estabilidade maior em seus gastos, mas convenhamos que as crianças não tem a necessidade de gerenciar suas finanças já que essas são dependentes de seus pais e logo não tem que arcar com nenhuma despesa de casa. 
+Todas as pessoas podem se beneficiar ao realizar a gestão de suas finanças, desde crianças que querem juntar um dinheiro para comprar um brinquedo novo até pessoas aposentadas que estão planejando uma viagem e principalmente os jovens trabalhadores que desejam ter uma estabilidade maior em seus gastos. 
 
-Desta forma, estabeleceu-se como público-alvo desta solução os homens e as mulheres acima de 18 anos que queiram gerênciar suas finanças criando metas a curto e longo prazo, buscando minimizar suas despesas e maximizar seus lucros a longo prazo.
+No entanto, estabeleceu-se como público-alvo desta solução homens e mulheres acima de 18 anos que queiram gerênciar suas finanças criando metas a curto e longo prazo, buscando minimizar suas despesas e maximizar seus lucros.
