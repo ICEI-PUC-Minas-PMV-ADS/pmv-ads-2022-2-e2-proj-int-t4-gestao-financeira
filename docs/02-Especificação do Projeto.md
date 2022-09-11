@@ -26,10 +26,12 @@ Lembre-se que você deve ser enumerar e descrever precisamente e personalizada t
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
+|--------------------|------------------------------------|----------------------------------------|
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
 |Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
 |Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|--------------------|------------------------------------|----------------------------------------|
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
@@ -46,17 +48,23 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|-------|-----------------------------------------------------|------------|
+| ID    | Descrição do Requisito                              | Prioridade |
+|-------|-----------------------------------------------------|------------|
+|RF-001 | Permitir que o usuário cadastre tarefas             |    ALTA    | 
+|RF-002 | Emitir um relatório de tarefas no mês               |    MÉDIA   |
+|-------|-----------------------------------------------------|------------|
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|-------|-----------------------------------------------------|------------|
+|ID     | Descrição do Requisito                              | Prioridade |
+|-------|-----------------------------------------------------|------------|
+|RNF-001| O sistema deve ser responsivo para rodar em um      |  MÉDIA     |
+|       | dispositivos móvel                                  |            |
+|-------|-----------------------------------------------------|------------|
+|RNF-002|Deve processar requisições do usuário em no máximo 3s|    BAIXA   | 
+|-------|-----------------------------------------------------|------------|
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
@@ -77,11 +85,12 @@ todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
+|--|----------------------------------------------------------------|
+|ID| Restrição                                                      |
+|--|----------------------------------------------------------------|
+|01| O projeto deverá ser entregue até o final do semestre          |
+|02| Não pode ser desenvolvido um módulo de backend                 |
+|--|----------------------------------------------------------------|
 
 Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
 
