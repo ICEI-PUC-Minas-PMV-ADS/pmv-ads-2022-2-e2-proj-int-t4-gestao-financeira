@@ -1,23 +1,22 @@
-# TÍTULO DO PROJETO
+# Gestão Financeira
 
-`CURSO`
+`Análise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Projeto: Desenvolvimento de uma aplicação interativa`
 
-`SEMESTRE`
+`2º semestre`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
+* Gabriel Alexandre Medrado Alves;
 * Leonardo Silva Jaques;
+* Pedro;
+* Tássia de Lima Teixeira;
 * Thiago Almeida Amorim;
-* Nome completo do aluno 3
-* Nome completo do aluno 4
 
-## Orientador
-
-* Nome completo do professor 1
+## Carlos Alberto Marques Pietrobon
 
 ## Instruções de utilização
 
