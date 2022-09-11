@@ -24,7 +24,7 @@ Como objetivos específicos, podemos ressaltar:
 
 ## Justificativa
 
-Infelizmente, no Brasil, a gestão financeira pessoal ainda é um senário muito distante por conta de pouquíssimos Brasileiros terem tido acesso a educação financeira.
+No Brasil, a gestão financeira pessoal ainda é um senário muito distante por conta de pouquíssimos Brasileiros terem tido acesso a educação financeira.
 
 Adicional a isso notamos que uma parcela da população chega a tentar realizar por um tempo a gestão de suas finanças, mas ao ver as diversas dificuldades que anotar tudo com papel e caneta e sem saber ao certo o que estão fazendo, tendem a desistir logo nos primeiros meses.
 
