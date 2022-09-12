@@ -4,9 +4,9 @@
 
 ## Personas
 
-Paulo de Abreu tem 22 anos, é entregador de Delivery e pensa em adquirir uma moto nova, pois adora andar de moto e realizar trilhas. Quando Paulo completou 18 anos fez o financiamento de uma moto. Devido a uma demissão sem aviso prévio, não conseguiu pagar suas dívidas e por isso acumulou juros até que seu nome foi parar no Serasa. Agora Paulo busca uma forma de organizar melhor suas finanças e quitar suas dividas.
+Paulo de Abreu tem 22 anos, é entregador de Delivery e pensa em adquirir uma moto nova, pois adora andar de moto e realizar trilhas. Quando Paulo completou 18 anos fez o financiamento de uma moto, mas devido a uma demissão sem aviso prévio não conseguiu pagar suas dívidas e por isso acumulou juros até que seu nome foi parar no Serasa. Agora Paulo busca uma forma de organizar melhor suas finanças para assim poder quitar suas dividas e realizar seu sonho.
 
-Dalva Maria tem 46 anos, é Confeiteira e pensa em abrir uma confeitaria. Depois de ter um problema com seu antigo chefe decidiu sair da empresa e dedicar-se a confeitaria, que antes era sua renda extra
+Dalva Maria tem 46 anos, é Confeiteira e pensa em abrir uma loja no centro de sua cidade. Depois de ter um problema com seu antigo chefe decidiu sair da empresa e dedicar-se em tempo integral à confeitaria, mas infelizmente Dalva não possui verba para inovação, cursos de aperfeiçoamento e expansão dos seus negócios. Por conta disso, Dalva está buscando uma forma de fazer uma melhor gestão da sua renda para quem sabe, com um pouco de planejamento, poder realizar seu sonho de ter sua própria confeitaria.
 
 ## Histórias de Usuários
 
