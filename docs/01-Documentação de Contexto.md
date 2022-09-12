@@ -9,7 +9,7 @@ Algumas pessoas possuem o hábito de registrar as contas a serem pagas todo mês
 Contudo, pode se tornar muito difícil manter suas finanças controladas sem auxílio de um recurso eficaz.
 
 ## Problema
-Como podemos realizar um controle finandeiro eficaz?
+Como podemos realizar um controle financeiro eficaz?
 
 ## Objetivos
 
