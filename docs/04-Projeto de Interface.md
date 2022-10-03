@@ -19,33 +19,24 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 
 Os wireframes tem como finalidade apresentar como será a interface do sistema e auxiliar no desenvolvimento da mesma:
 
-/-----------------------/
-
 ![Wireframe-1](img/1.PNG)
 
-/-----------------------/
 
 ![Wireframe-2](img/2.PNG)
 
-/-----------------------/
 
 ![Wireframe-3](img/3.PNG)
 
-/-----------------------/
 
 ![Wireframe-4](img/4.PNG)
 
-/-----------------------/
 
 ![Wireframe-5](img/5.PNG)
 
-/-----------------------/
 
 ![Wireframe-6](img/6.PNG)
 
-/-----------------------/
 
 ![Wireframe-8](img/8.PNG)
 
-/-----------------------/
 
