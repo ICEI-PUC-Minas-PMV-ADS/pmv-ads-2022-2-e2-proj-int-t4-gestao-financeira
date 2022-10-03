@@ -1,3 +1,7 @@
+# Funcionalidade do Sistema (Telas)
+Nesta Função são aprensantadas as telas desenvolvidas para cada uma das funcionalidades do sistema. O respectivo endereço (URL) e outras orientações de acesso são apresentadas na sequência.
+Visualização de HomePage (RF-01 e RF-02)
+A tela principal do sistema apresenta uma homepage fixa ao lado direito. E Algumas opções para movimentações de conta do usuário
 
 # Metodologia
 
