@@ -68,4 +68,5 @@ As questões que limitam a execução desse projeto e que se configuram como obr
 
 ## Diagrama de Casos de Uso
 
-- [Clique aqui](docs\img\DiagramaCasoDeUso.jpg) para visualizar o diagrama de casos de uso.
+![DiagramaCasoDeUso](https://user-images.githubusercontent.com/103227669/198908126-335e119d-1954-46df-ba1f-c763058e1c35.jpg)
+
