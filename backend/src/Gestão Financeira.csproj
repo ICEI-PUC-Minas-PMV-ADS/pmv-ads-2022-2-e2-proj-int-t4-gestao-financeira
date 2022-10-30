@@ -8,9 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="GestaoFinanceiraTests\**" />
     <Compile Remove="Views\NovaPasta\**" />
+    <Content Remove="GestaoFinanceiraTests\**" />
     <Content Remove="Views\NovaPasta\**" />
+    <EmbeddedResource Remove="GestaoFinanceiraTests\**" />
     <EmbeddedResource Remove="Views\NovaPasta\**" />
+    <None Remove="GestaoFinanceiraTests\**" />
     <None Remove="Views\NovaPasta\**" />
   </ItemGroup>
 
