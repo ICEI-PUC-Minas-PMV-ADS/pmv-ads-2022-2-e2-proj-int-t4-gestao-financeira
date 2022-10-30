@@ -1,29 +1,27 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Gestão_Financeira.Models;
+using Gestão_Financeira.Repositorio;
 
 namespace Gestão_Financeira.Controllers
 {
     [ApiController]
-    public class TransacaoController : ControllerBase;
+    public class TransacaoController : ControllerBase
     {
+        private readonly TransacaoRepositorio _transacaoRepositorio;
+
+        public TransacaoController(TransacaoRepositorio transacaoRepositorio){
+            _transacaoRepositorio = transacaoRepositorio;
+        }
+
         [HttpPost("NovaTransacao")]
-        public TransacaoModelResponse Saque([FromBody] TransacaoModelRequest transacao ) {
+        public TransacaoModelResponse Saque([FromBody] TransacaoModel transacao ) {
 
-        
-            var NovaTransacao = new TransacaoModelRequest 
-            {
-                Id: Guid.NewGuid().ToString(),
-                valor: transacao.valor,
-                tipoTransacao: transacao.tipoTransacao
-                dataTransacao: new DateTime()
-            }
+            throw new NotImplementedException();
+        }
 
-            return NovaTransacao
-            
-        };
         [HttpGet("ConsultaSaldo")]
-        public TransacaoModelResponse ConsultaSaldo([FromBody] TransacaoModelRequest transacao ) {
-            
-        };
+        public TransacaoModelResponse ConsultaSaldo(int id) {
+            throw new NotImplementedException();
+        }
     }
 }
