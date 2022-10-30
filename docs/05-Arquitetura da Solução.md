@@ -5,7 +5,8 @@
 Nesta seção são apresentados os detalhes técnicos da solução criada pela equipe, tratando dos componentes que fazem parte da solução e do ambiente de hospedagem da solução.
 
 ### Diagrama de Componentes
-![Diagrama de Componentes](img\componentes.png "Figura 8: Arquitetura da Solução")
+
+![componentes](https://user-images.githubusercontent.com/103227669/198908242-5d5c3521-84c9-40b2-990c-292338817a89.png)
 
 A solução implementada conta com os seguintes módulos:
 - Navegador - Interface básica do sistema 
