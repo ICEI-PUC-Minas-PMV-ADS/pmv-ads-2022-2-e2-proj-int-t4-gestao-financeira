@@ -2,41 +2,36 @@
 
 <span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
 
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
+Nesta seção são apresentados os detalhes técnicos da solução criada pela equipe, tratando dos componentes que fazem parte da solução e do ambiente de hospedagem da solução.
 
-## Diagrama de Classes
+### Diagrama de Componentes
+![Diagrama de Componentes](img\componentes.png "Figura 8: Arquitetura da Solução")
 
-O diagrama de classes ilustra graficamente como será a estrutura do software, e como cada uma das classes da sua estrutura estarão interligadas. Essas classes servem de modelo para materializar os objetos que executarão na memória.
+A solução implementada conta com os seguintes módulos:
+- Navegador - Interface básica do sistema 
+- Páginas Web - Conjunto de arquivos HTML, CSS, JavaScript e imagens que implementam as funcionalidades do sistema.
+- Hospedagem - local na Internet onde as páginas são mantidas e acessadas pelo navegador. 
+Hospedagem
+O site utiliza a plataforma do Heroku como ambiente de hospedagem do site do projeto. O site é mantido no ambiente da URL: 
+https://link_exemplo.herokuapp.com 
+A publicação do site no Heroku é feita por meio de uma submissão do projeto (push) via git para o repositório remoto.
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Classes”.
+### Diagrama de Caso de Uso
 
-> - [Diagramas de Classes - Documentação da IBM](img/modeloClasses.jpeg)
+> - [Diagrama de Caso de Uso](img\DiagramaCasoDeUso.jpg "Figura 9: Diagrama de Caso de Uso")
 
-## Modelo ER (Projeto Conceitual)
+### Modelagem de Dados
 
-O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
+> - [Modelagem de dados](img\modeloBancoDados.jpeg)
+### Diagrama de Classes
 
-- [Website com GitHub Pages](img/modeloEntidadeRelacionamento.jpeg)
+Os componentes que fazem parte da solução são apresentados na Figura que se segue.
 
-## Projeto da Base de Dados
+> - [Diagramas de Classes](img/modeloClasses.jpeg)
 
-O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade.
- 
-- [Website com GitHub Pages](img/modeloBancoDados.jpeg
+### Modelo de Entidade e Relacionamento (Projeto Conceitual)
 
-## Tecnologias Utilizadas
+O Modelo ER representa através de um diagrama como as entidades se relacionam entre si na aplicação interativa.
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+- [Modelo de entidade e relacionamento](img/modeloEntidadeRelacionamento.jpeg)
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
-
-## Hospedagem
-
-Explique como a hospedagem e o lançamento da plataforma foi feita.
-
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)

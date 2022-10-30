@@ -1,8 +1,23 @@
 # Registro de Testes de Usabilidade
 
-Após realizar os testes de usabilidade, obtém-se um relatório a partir das análises realizadas. O Registro de Testes de Usabilidade é um relatório que contém as evidências dos testes e relatos dos usuários participantes, baseado no Plano de Testes de Usabilidade desenvolvido para os casos de uso desta etapa.
+Utilizamos a seguinte escala de avaliação para realização dos testes de usabilidade:
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Registro de Testes de Usabilidade”.
+| **Escala** 	| **Discriminação** 	|
+|:---:	|:---:	|
+|	Nível 0 	| Não é encarado necessariamente como um problema de usabilidade.  |
+| Nível 1 	| Problema estético que não tem necessidade de ser corrigido, a menos que haja tempo e recurso disponível.  |
+| Nível 2	| Pequeno problema com baixa prioridade na correção. 
+ |
+|Nível 3 | Problema com alta prioridade de correção. |
+| Nível 4	| Catástrofe de usabilidade, ou seja, o produto só será liberado se a correção for feita.
 
-> **Links Úteis**:
-> - [Ferramentas de Testes de Usabilidade](https://www.usability.gov/how-to-and-tools/resources/templates.html)
+A equipe de desenvolvimento realizou a o seguinte registro de movimentações:
+ 
+ ![Registro das movimentações]()
+
+ O que fazer para melhorar:
+
+ | **Heurística** 	| **Melhoria** 	|
+|:---:	|:---:	|
+|	Visibilidade do status 	|      |
+| Compatibilidade com o mundo real 	|     |
