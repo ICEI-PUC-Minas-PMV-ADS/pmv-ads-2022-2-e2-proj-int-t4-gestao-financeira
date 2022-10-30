@@ -1,0 +1,26 @@
+﻿@model UserModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_LayoutLogin";
+}
+
+@if (TempData["MensagemErro"] != null){
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<form asp-controller="Login" asp-action="Entrar" method="post">
+  <div class="mb-3">
+    <label for="Email" class="form-label">Email</label>
+    <input type="email" asp-for="Email" class="form-control" id="email1" aria-describedby="emailHelp">
+    @Html.ValidationMessageFor(x => x.Email)
+  </div>
+  <div class="mb-3">
+    <label for="Senha" class="form-label">Senha</label>
+    <input type="password" asp-for="Senha" class="form-control" id="senha">
+        @Html.ValidationMessageFor(x => x.Senha)
+  </div>
+  <button type="submit" class="btn btn-primary">Entrar</button>
+</form>
