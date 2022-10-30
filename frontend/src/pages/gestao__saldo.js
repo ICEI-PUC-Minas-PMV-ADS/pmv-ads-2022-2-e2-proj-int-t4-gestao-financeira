@@ -3,6 +3,7 @@ export const getaoSaldo = () => {
         <div class="container__gestao__saldo" >
             <div class="container__apresenta__saldo" >
                 <div class="container__saldo" >
+                    <p class="label__valor" >Saldo</p>
                     <h3 id="saldo__valor" >R$ - 1.000</h3>
                 </div>
                 <div class="container__transacoes">
