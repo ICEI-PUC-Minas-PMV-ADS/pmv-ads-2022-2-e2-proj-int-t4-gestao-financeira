@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\votto\\Documents\\Gestão FInanceira\\Gestão Financeira.csproj": {}
+    "C:\\Users\\votto\\Documents\\Gestão Financeira\\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\\src\\Gestão Financeira.csproj": {}
   },
   "projects": {
-    "C:\\Users\\votto\\Documents\\Gestão FInanceira\\Gestão Financeira.csproj": {
+    "C:\\Users\\votto\\Documents\\Gestão Financeira\\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\\src\\Gestão Financeira.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\votto\\Documents\\Gestão FInanceira\\Gestão Financeira.csproj",
+        "projectUniqueName": "C:\\Users\\votto\\Documents\\Gestão Financeira\\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\\src\\Gestão Financeira.csproj",
         "projectName": "Gestão Financeira",
-        "projectPath": "C:\\Users\\votto\\Documents\\Gestão FInanceira\\Gestão Financeira.csproj",
+        "projectPath": "C:\\Users\\votto\\Documents\\Gestão Financeira\\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\\src\\Gestão Financeira.csproj",
         "packagesPath": "C:\\Users\\votto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\votto\\Documents\\Gestão FInanceira\\obj\\",
+        "outputPath": "C:\\Users\\votto\\Documents\\Gestão Financeira\\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\\src\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

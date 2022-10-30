@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wXCB/KQCDajKFX5RmPduiLIBZTh5OlDQhzGgIcyV/DjQ40/VPMw/uP0lvX0aeGZZKhdDrICh6WpqqgAC9mQiDA==",
+  "dgSpecHash": "LDvnQNhvNSy5ez2MV1YyjzJd9D2waGE2Nqq8Rl+Syb8dNYdtxDJoW/orUENG/vUlMg2bc20eZNApiIe6UU5z+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\votto\\Documents\\Gestão FInanceira\\Gestão Financeira.csproj",
+  "projectFilePath": "C:\\Users\\votto\\Documents\\Gestão Financeira\\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\\src\\Gestão Financeira.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\votto\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\votto\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\6.0.10\\microsoft.aspnetcore.mvc.razor.extensions.6.0.10.nupkg.sha512",
