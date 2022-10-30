@@ -21,7 +21,7 @@ namespace Gestão_Financeira.Models
 
     public class TransacaoModelResponse
     {
-        public float newBalance: { get; set; }
-        public List<TransactionHistory> transactionHistory: { get; set; }
+        public float novoSaldo: { get; set; }
+        public List<HistoricoTransacao> HistoricoTransacao: { get; set; }
     }
 }
