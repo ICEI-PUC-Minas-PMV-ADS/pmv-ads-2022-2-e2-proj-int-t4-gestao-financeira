@@ -1,4 +1,4 @@
-﻿@model UserModel
+﻿@model LoginModel
 @{
     ViewData["Title"] = "Login";
     Layout = "_LayoutLogin";
@@ -13,12 +13,12 @@
 
 <form asp-controller="Login" asp-action="Entrar" method="post">
   <div class="mb-3">
-    <label for="Email" class="form-label">Email</label>
-    <input type="email" asp-for="Email" class="form-control" id="email1" aria-describedby="emailHelp">
-    @Html.ValidationMessageFor(x => x.Email)
+    <label class="form-label">Email</label>
+    <input type="email" asp-for="Email1" class="form-control" id="email1" aria-describedby="emailHelp">
+    @Html.ValidationMessageFor(x => x.Email1)
   </div>
   <div class="mb-3">
-    <label for="Senha" class="form-label">Senha</label>
+    <label  class="form-label">Senha</label>
     <input type="password" asp-for="Senha" class="form-control" id="senha">
         @Html.ValidationMessageFor(x => x.Senha)
   </div>

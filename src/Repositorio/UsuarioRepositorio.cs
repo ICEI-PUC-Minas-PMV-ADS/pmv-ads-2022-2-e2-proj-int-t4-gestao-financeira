@@ -5,22 +5,22 @@ namespace Gestão_Financeira.Repositorio
 {
     public class UsuarioRepositorio : IUsuarioRepositorio
     {
-        private readonly BancoContext _bancoContext;
+        private readonly BancoContext _context;
         public UsuarioRepositorio(BancoContext bancoContext)
         {
-            _bancoContext = bancoContext;
+            this._context = bancoContext;
         }
         public UserModel Adicionar(UserModel usuario)
         {
             //gravar no db
-            _bancoContext.Usuarios.Add(usuario);
-            _bancoContext.SaveChanges();
+            _context.Usuarios.Add(usuario);
+            _context.SaveChanges();
             return usuario;
         }
 
-        public UserModel BuscaPorLogin(string email)
+        public UserModel BuscarLogin(string email)
         {
-            return _bancoContext.Usuarios.FirstOrDefault(x => x.Email.ToUpper() == email.ToUpper());
+            return _context.Usuarios.FirstOrDefault(x => x.Email == email);
         }
     }
 }

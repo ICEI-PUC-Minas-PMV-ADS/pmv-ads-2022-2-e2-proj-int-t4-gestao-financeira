@@ -5,6 +5,7 @@ namespace Gestão_Financeira.Repositorio
     public interface IUsuarioRepositorio
     {
         UserModel Adicionar(UserModel usuario);
-        UserModel BuscaPorLogin(string email);
+        UserModel BuscarLogin(string email);
+        
     }
 }

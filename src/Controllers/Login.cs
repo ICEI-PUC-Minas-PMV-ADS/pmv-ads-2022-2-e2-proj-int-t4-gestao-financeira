@@ -6,42 +6,41 @@ namespace Gestão_Financeira.Controllers
 {
     public class Login : Controller
     {
-        public readonly IUsuarioRepositorio _usuarioRepositorio;
+
+        private readonly IUsuarioRepositorio _usuarioRepositorio;
+        public Login(IUsuarioRepositorio usuarioRepositorio)
+        {
+            _usuarioRepositorio = usuarioRepositorio;
+        }
+
         public IActionResult Index()
         {
             return View();
         }
 
-        public IUsuarioRepositorio Get_usuarioRepositorio()
-        {
-            return _usuarioRepositorio;
-        }
+        
 
         [HttpPost]
-        public IActionResult Entrar(UserModel userModel)
+        public IActionResult Entrar(LoginModel loginModel)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    UserModel usuario = _usuarioRepositorio.BuscaPorLogin(userModel.Email);
-
+                    UserModel usuario = _usuarioRepositorio.BuscarLogin(loginModel.Email1);
                     if (usuario != null)
                     {
-                        if (usuario.SenhaValida(userModel.Senha))
+                        if (usuario.SenhaValida(loginModel.Senha))
                         {
                             return RedirectToAction("Index", "HomeLogado");
                         }
-                        else
-                        {
-                            TempData["MensagemErro"] = $"Usuário e/ou senha inválido(s)";
-                        }
                         
                     }
+                    TempData["MensagemErro"] = $"Usuário e/ou senha inválido(s) ";
 
-                    TempData["MensagemErro"] = $"Usuário e/ou senha inválido(s)";
                 }
-                return View("Index");
+
+                return View("index");
             }
             catch (Exception erro)
             {
