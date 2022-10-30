@@ -4,9 +4,9 @@
 
 ## Personas
 
-![PersonaPaulo](img\PersonaPaulo.JPG)
+![PersonaDalva](https://user-images.githubusercontent.com/103227669/198908044-5a782310-8d6b-42b0-b8dd-c303c16f8662.jpg)
 
-![PersonaDalva](img\PersonaDalva.JPG)
+![PersonaPaulo](https://user-images.githubusercontent.com/103227669/198908064-2b09af34-f873-4c03-beda-d0d9003e32c7.jpg)
 
 ## Histórias de Usuários
 
