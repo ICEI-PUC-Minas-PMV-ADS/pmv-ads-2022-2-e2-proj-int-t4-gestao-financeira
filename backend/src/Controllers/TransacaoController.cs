@@ -9,9 +9,7 @@ namespace Gestão_Financeira.Controllers
         [HttpPost("NovaTransacao")]
         public TransacaoModelResponse Saque([FromBody] TransacaoModelRequest transacao ) {
 
-            
-            
-
+        
             var NovaTransacao = new TransacaoModelRequest 
             {
                 Id: Guid.NewGuid().ToString(),
