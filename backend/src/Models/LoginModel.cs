@@ -8,8 +8,5 @@ namespace Gestão_Financeira.Models
         public string Email1 { get; set; }
         [Required(ErrorMessage = "Digite a senha!")]
         public string Senha { get; set; }
-
-        
-
     }
 }

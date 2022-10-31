@@ -1156,3 +1156,14 @@ C:\Users\pedro.santos\Estudos\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\ba
 C:\Users\pedro.santos\Estudos\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\backend\src\obj\Debug\net6.0\Gestão Financeira.pdb
 C:\Users\pedro.santos\Estudos\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\backend\src\obj\Debug\net6.0\Gestão Financeira.genruntimeconfig.cache
 C:\Users\pedro.santos\Estudos\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\backend\src\obj\Debug\net6.0\ref\Gestão Financeira.dll
+C:\Users\pedro.santos\Estudos\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\backend\src\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\pedro.santos\Estudos\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\backend\src\bin\Debug\net6.0\System.Web.Http.dll
+C:\Users\pedro.santos\Estudos\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\backend\src\bin\Debug\net6.0\System.Web.Http.WebHost.dll
+C:\Users\pedro.santos\Estudos\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\backend\src\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\pedro.santos\Estudos\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\backend\src\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
+C:\Users\pedro.santos\Estudos\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\backend\src\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\pedro.santos\Estudos\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\backend\src\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\pedro.santos\Estudos\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\backend\src\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\pedro.santos\Estudos\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\backend\src\bin\Debug\net6.0\Swashbuckle.Core.dll
+C:\Users\pedro.santos\Estudos\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\backend\src\bin\Debug\net6.0\WebActivatorEx.dll
+C:\Users\pedro.santos\Estudos\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\backend\src\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll

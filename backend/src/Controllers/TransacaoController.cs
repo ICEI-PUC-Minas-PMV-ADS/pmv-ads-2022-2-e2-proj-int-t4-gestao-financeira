@@ -4,6 +4,7 @@ using Gestão_Financeira.Repositorio;
 
 namespace Gestão_Financeira.Controllers
 {
+    [Route("api/[controller]")]
     [ApiController]
     public class TransacaoController : ControllerBase
     {

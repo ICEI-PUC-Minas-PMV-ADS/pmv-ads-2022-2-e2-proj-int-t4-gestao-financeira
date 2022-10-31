@@ -1,6 +1,6 @@
 ﻿namespace Gestão_Financeira.Repositorio
 {
-    public class SaldoContaRepositorio
+    public class SaldoContaRepositorio : ISaldoContaRepositorio
     {
     }
 }
