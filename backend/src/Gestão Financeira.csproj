@@ -8,9 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="GestaoFinanceiraTests\**" />
     <Compile Remove="Views\NovaPasta\**" />
+    <Content Remove="GestaoFinanceiraTests\**" />
     <Content Remove="Views\NovaPasta\**" />
+    <EmbeddedResource Remove="GestaoFinanceiraTests\**" />
     <EmbeddedResource Remove="Views\NovaPasta\**" />
+    <None Remove="GestaoFinanceiraTests\**" />
     <None Remove="Views\NovaPasta\**" />
   </ItemGroup>
 
@@ -30,6 +34,8 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Swashbuckle" Version="5.6.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
 </Project>

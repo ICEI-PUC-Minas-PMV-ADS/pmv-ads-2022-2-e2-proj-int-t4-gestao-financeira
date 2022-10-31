@@ -15,5 +15,6 @@ namespace Gestão_Financeira.Data
 
         }
         public DbSet<UserModel> Usuarios { get; set; }
+        public DbSet<TransacaoModel> Transacoes { get; set; }
     }
 }
