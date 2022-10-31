@@ -6,7 +6,6 @@ namespace Gestão_Financeira.Controllers
 {
     public class Login : Controller
     {
-
         private readonly IUsuarioRepositorio _usuarioRepositorio;
         public Login(IUsuarioRepositorio usuarioRepositorio)
         {
@@ -17,8 +16,6 @@ namespace Gestão_Financeira.Controllers
         {
             return View();
         }
-
-        
 
         [HttpPost]
         public IActionResult Entrar(LoginModel loginModel)
