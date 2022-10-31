@@ -8,10 +8,10 @@ namespace Gestão_Financeira.Controllers
     [ApiController]
     public class TransacaoController : ControllerBase
     {
-        private readonly TransacaoRepositorio _transacaoRepositorio;
+        private readonly ITransacaoRepositorio _transacaoRepositorio;
         private static float _saldo = 0; //Remover futuramente, o correto é fazermos a manutenção do saldo na entidade SaldoConta
 
-        public TransacaoController(TransacaoRepositorio transacaoRepositorio){
+        public TransacaoController(ITransacaoRepositorio transacaoRepositorio){
             _transacaoRepositorio = transacaoRepositorio;
         }
 
@@ -21,7 +21,7 @@ namespace Gestão_Financeira.Controllers
             if(transacao.Valor > _saldo)
                 return BadRequest("O valor de saque não pode ser maior que o valor de saldo.");
 
-            _transacaoRepositorio.Sacar(transacao);
+            //_transacaoRepositorio.Sacar(transacao);
             _saldo = _saldo - transacao.Valor;
 
             var historicoTransacao = new List<TransacaoModel>();
@@ -43,7 +43,7 @@ namespace Gestão_Financeira.Controllers
             if (transacao.Valor <= 0)
                 return BadRequest("O valor de deposito deve ser superior que zero.");
 
-            _transacaoRepositorio.Depositar(transacao);
+            //_transacaoRepositorio.Depositar(transacao);
             _saldo = _saldo + transacao.Valor;
 
             var historicoTransacao = new List<TransacaoModel>();
