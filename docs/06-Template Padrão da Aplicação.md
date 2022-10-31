@@ -4,7 +4,7 @@
 
 O padrão de layout a ser utilizado pelo site tem correspondência ao projeto de Interface elaborado anteriormente, conforme figura 12.
 
-![Template padrão do site](img\1.PNG "Figura 12 - Template padrão do site")
+![Template padrão do site](img/1.PNG "Figura 12 - Template padrão do site")
 
 O template criado está disponível no site https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira e é composto pelos seguintes layouts: 
 - Home
