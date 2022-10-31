@@ -1,6 +1,8 @@
 ﻿using Gestão_Financeira.Controllers;
 using Gestão_Financeira.Models;
 using Gestão_Financeira.Repositorio;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
@@ -10,28 +12,61 @@ namespace GestaoFinanceiraTests.TransacaoTests
     public class TransacaoTests
     {
         private Mock<ITransacaoRepositorio> _transacaoRepositorioMock;
-        private CadastroController _cadastroController;
+        private TransacaoController _transacaoController;
 
         public TransacaoTests()
         {
             _transacaoRepositorioMock = new Mock<ITransacaoRepositorio>();
-            _cadastroController = new TransacaoController(_transacaoRepositorioMock.Object);
+            _transacaoController = new TransacaoController(_transacaoRepositorioMock.Object);
         }
 
         [TestMethod]
-        public void CadastraUsuarioComSucesso()
+        public void TransacaoDeDepositoComSucesso()
         {
-            var usuario = new UserModel
+            var transacao = new TransacaoModel
             {
                 Id = 1,
-                Nome = "Pedro Freitas",
-                Apelido = "Pedrao",
-                Senha = "Psw2325@",
-                Email = "pedrocabrito@gmail.com"
+                Valor = 100
             };
 
-            var result = _cadastroController.Criar(usuario);
-            Assert.IsTrue(result != null);
+            var result = _transacaoController.Depositar(transacao).Result as CreatedResult;
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual(result.StatusCode, StatusCodes.Status201Created);
+        }
+
+        [TestMethod]
+        public void TransacaoDeSaqueComSucesso()
+        {
+            var transacao = new TransacaoModel
+            {
+                Id = 1,
+                Valor = 100
+            };
+
+            _transacaoController.Depositar(transacao);
+            transacao.Valor = 50;
+            
+            var result = _transacaoController.Sacar(transacao).Result as CreatedResult;
+            Assert.IsNotNull(result);
+            Assert.AreEqual(result.StatusCode, StatusCodes.Status201Created);
+        }
+
+        [TestMethod]
+        public void TransacaoConsultaSaldoComSucesso()
+        {
+            var transacao = new TransacaoModel
+            {
+                Id = 1,
+                Valor = 100
+            };
+
+            _transacaoController.Depositar(transacao);
+
+            var result = _transacaoController.ConsultarSaldo().Result as OkObjectResult;
+            Assert.IsNotNull(result);
+            Assert.AreEqual(result.StatusCode, StatusCodes.Status200OK);
+            Assert.AreEqual(result.Value, transacao.Valor);
         }
     }
 }
