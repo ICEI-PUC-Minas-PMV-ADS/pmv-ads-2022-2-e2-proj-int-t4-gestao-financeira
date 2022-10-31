@@ -16,7 +16,11 @@ namespace Gestão_Financeira.Models
     public class TransacaoModelResponse
     {
         public float NovoSaldo { get; set; }
-        public List<TransacaoModel> HistoricoTransacao => new List<TransacaoModel>();
+        public List<TransacaoModel> HistoricoTransacao { get; set; }
 
+        public TransacaoModelResponse()
+        {
+            HistoricoTransacao = new List<TransacaoModel>();
+        }
     }
 }
