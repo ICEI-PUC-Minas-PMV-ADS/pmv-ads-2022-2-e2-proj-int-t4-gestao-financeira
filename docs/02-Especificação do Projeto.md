@@ -4,9 +4,9 @@
 
 ## Personas
 
-Paulo de Abreu tem 22 anos, é entregador de Delivery e pensa em adquirir uma moto nova, pois adora andar de moto e realizar trilhas. Quando Paulo completou 18 anos fez o financiamento de uma moto, mas devido a uma demissão sem aviso prévio não conseguiu pagar suas dívidas e por isso acumulou juros até que seu nome foi parar no Serasa. Agora Paulo busca uma forma de organizar melhor suas finanças para assim poder quitar suas dividas e realizar seu sonho.
+![PersonaDalva](https://user-images.githubusercontent.com/103227669/198908044-5a782310-8d6b-42b0-b8dd-c303c16f8662.jpg)
 
-Dalva Maria tem 46 anos, é Confeiteira e pensa em abrir uma loja no centro de sua cidade. Depois de ter um problema com seu antigo chefe decidiu sair da empresa e dedicar-se em tempo integral à confeitaria, mas infelizmente Dalva não possui verba para inovação, cursos de aperfeiçoamento e expansão dos seus negócios. Por conta disso, Dalva está buscando uma forma de fazer uma melhor gestão da sua renda para quem sabe, com um pouco de planejamento, poder realizar seu sonho de ter sua própria confeitaria.
+![PersonaPaulo](https://user-images.githubusercontent.com/103227669/198908064-2b09af34-f873-4c03-beda-d0d9003e32c7.jpg)
 
 ## Histórias de Usuários
 
@@ -14,44 +14,59 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Paulo de Abreu      |Definir suas despesas de curto e longo prazo   | Para manter controle dos gastos. |
+|Paulo de Abreu      |Definir minhas despesas de curto e longo prazo   | Para manter controle dos gastos. |
 |Paulo de Abreu      |Manter uma reserva de emergência  | Para imprevistos. |
 |Paulo de Abreu      |Caixa extra | Para adquirir uma moto nova |
-|Dalva Maria    |Registrar movimentações financeiras | Para ter controle dos seus gastos |
-|Dalva Maria     |Definir metas e objetivos | Para ampliar seus negócios. |
+|Dalva Maria    |Registrar movimentações financeiras | Para ter controle dos meus gastos |
+|Dalva Maria     |Definir metas e objetivos | Para ampliar meus negócios. |
 |Dalva Maria     |Gráficos que apontem seu percentual de crescimento | Para visualizar novas metas |
 
 ## Requisitos
 
-O sistema deve, principalmente, criar um gráfico pizza e mostrar os fluxos de gastos do dinheiro. Uma aba específica para registro de todas as movimentações financeiras com campos específicos informando objetivos, planejamento e saldo de reserva de emergência. Caso o usuário trabalhe com outras moedas o sistema informará a cotação das principais moedas mundiais através de um botão de redirecionamento.  Desse modo é possível deixar claro para o usuário como ele deve se organizar financeiramente.
+O sistema deve, principalmente, mostrar as movimentações financeiras. Uma aba específica para registro de todas as movimentações financeiras com campos específicos informando objetivos, planejamento e saldo de reserva de emergência. Caso o usuário trabalhe com outras moedas o sistema informará a cotação das principais moedas mundiais através de um botão de redirecionamento.  Desse modo é possível deixar claro para o usuário como ele deve se organizar financeiramente.
 
 ### Requisitos Funcionais
 
-O sistema será formado por abas, sendo elas: homepage; registro de movimentações; objetivos financeiros; planejamento de compras; saldo de reserva de emergência e um botão para a cotação das principais moedas.
+A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade em que os mesmos devem ser entregues.
 
 | ID    | Descrição do Requisito                              | Prioridade |
 |-------|-----------------------------------------------------|------------|
-|RF-001 | Menu fixo           |    MÉDIA    | 
-|RF-002 | Abas: Registro de movimentações               |    ALTA   |
-|RF-002 |Botão de cotação de moedas             |    MÉDIA   |
+|RF-01 | Menu fixo           |    Baixa    | 
+|RF-02 | O usuário poderá fazer cadastro para login no sistema.               |    Alta   |
+|RF-03 |O usuário consegue visualizar o registro de movimentações.              |    Alta   |
+|RF-03 |O usuário consegue visualizar o registro de movimentações.              |    Alta   |
+|RF-04 |O usuário poderá cadastrar suas movimentações financeiras.              |    Alta   |
+|RF-05 |O usuário poderá criar objetivos financeiros.              |    Média   |
+|RF-06 |O sistema apresenta o progresso dos seus objetivos financeiros.              |    Média   |
+|RF-07 |O usuário poderá planejar compras              |    Baixa   |
+|RF-08 |O usuário planejará uma reserva de emergência.              |    Baixa   |
+|RF-09 |O usuário registrará o saldo da sua reserva de emergência.              |    Baixa   |
+|RF-10 |Botão de cotação de moedas.             |    Baixa   |
 
 ### Requisitos não Funcionais
 
+A tabela a seguir apresenta os requisitos não funcionais que o projeto deverá atender.
+
 |ID     | Descrição do Requisito                              | Prioridade |
 |-------|-----------------------------------------------------|------------|
-|RNF-001| A velocidade do sistema dependerá do hardware, e da velocidade de navegação do usuário;      |  MÉDIA     |
-|RNF-002|A facilidade de uso pode ser medida pelo número de janelas ou o tempo de treino do usuário|    BAIXA   | 
+|RNF-01| O sistema deve estar disponível pelo menos 90% das 24 horas do dia, nos 7 dias da semana.      |  Alta     |
+|RNF-02|O login do usuário deve demorar no máximo 6 segundos.|    Média   | 
+|RNF-03|O sistema deve ser implementado na linguagem JavaScript.|    Baixa   | 
+|RNF-04|Os dados cadastrais do cliente devem estar disponíveis apenas para ele mesmo.|    Alta   | 
+|RNF-05|Os dados financeiros inseridos pelo cliente no sistema devem estar disponíveis apenas para ele mesmo.|    Alta   | 
+
 
 ## Restrições
 
-O projeto está restrito pelos itens apresentados na tabela a seguir.
+As questões que limitam a execução desse projeto e que se configuram como obrigações claras para o desenvolvimento do projeto em questão são apresentadas na tabela a seguir.
 
 |ID| Restrição                                                      |
 |--|----------------------------------------------------------------|
-|01| Servidor para o sistema          |
+|RE-01| O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 11/12/2022.        |
+|RE-02| O front-end do sistema deve ser escrito em html, CSS e JavaScript, sem o uso de frameworks.     |
 
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
 
 ## Diagrama de Casos de Uso
 
-- [Clique aqui](./img/diagramaCasosDeUso.png) para visualizar o diagrama de casos de uso.
+![DiagramaCasoDeUso](https://user-images.githubusercontent.com/103227669/198908126-335e119d-1954-46df-ba1f-c763058e1c35.jpg)
+
