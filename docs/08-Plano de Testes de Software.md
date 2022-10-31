@@ -11,9 +11,8 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 |:---:	|:---:	|
 |	Requisito Associado 	| Home |
 | Objetivo do Teste 	| Verificar se o site carregou todas as aplicações |
-| Passos 	| 1) Acessar o navegador; 2) Informar o endereço do site; 3) Visualizar a página home e rolar nas demais.
- |
-|Critério de Êxito | •	Home ficar visível em toda a extensão da página; •	Quando utilizarmos determinado botão ele deve redirecionar para a parte correta da página.
+| Passos 	| 1) Acessar o navegador; 2) Informar o endereço do site; 3) Visualizar a página home e rolar nas demais.|
+|Critério de Êxito | •	Home ficar visível em toda a extensão da página; •	Quando utilizarmos determinado botão ele deve redirecionar para a parte correta da página.|
 
  
 
