@@ -1,4 +1,5 @@
 import { CommunicateAPI } from "../services/CommunicatesAPI.js";
+import { oninputEvent } from "../utils/format__currency.js";
 
 export const getaoSaldo = () => {
   const { novoSaldo, historicoTransacao } = new CommunicateAPI(
@@ -52,13 +53,6 @@ export const getaoSaldo = () => {
     `;
 };
 
-const maskCurrency = (value) => {
-  return new Intl.NumberFormat("pt-BR", {
-    style: "currency",
-    currency: "BRL",
-  }).format(value);
-};
-
 export const dynamicallyGenerateInput = () => {
   let inputValue = document.createElement("input");
 
@@ -69,17 +63,7 @@ export const dynamicallyGenerateInput = () => {
   inputValue.placeholder = "R$ 00,00";
   inputValue.name = "valor";
 
-  inputValue.oninput = (event) => {
-    const onlyDigits = event.target.value
-      .split("")
-      .filter((s) => /\d/.test(s))
-      .join("")
-      .padStart(3, "0");
-
-    const digitsFloat = onlyDigits.slice(0, -2) + "." + onlyDigits.slice(-2);
-
-    event.target.value = maskCurrency(digitsFloat);
-  };
+  inputValue.oninput = (event) => oninputEvent(event);
 
   document.getElementById("container__inserir__valor").appendChild(inputValue);
 };
