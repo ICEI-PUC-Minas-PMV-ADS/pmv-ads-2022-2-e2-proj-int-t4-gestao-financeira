@@ -51,10 +51,10 @@
   align-items: center;
   justify-content: space-around;
   list-style: none;
-  animation: normal animationSideMenu 2s;
+  animation: normal animationInsert 2s;
 }
 
-@keyframes animationSideMenu {
+@keyframes animationInsert {
   0% {
     margin-left: -100%;
   }
@@ -63,7 +63,7 @@
   }
 }
 
-@keyframes animationSideMenuClose {
+@keyframes animationClose {
   0% {
     margin-left: 0%;
   }
@@ -112,4 +112,35 @@
 .items__menu__side {
   text-decoration: none;
   color: rgb(180, 180, 180);
+}
+
+.reloading {
+  border: solid 3.5px black;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation: animationLoading infinite 1.5s;
+}
+
+@keyframes animationLoading {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    border-top: none;
+  }
+  50% {
+    border-top: none;
+    border-left: none;
+  }
+  75% {
+    border-color: rgba(0, 0, 0, 0.5);
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+  }
+  100% {
+    transform: rotateZ(-700deg);
+  }
 }
