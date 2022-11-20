@@ -41,6 +41,19 @@ export const getaoSaldo = () => {
                     <div id="container__inserir__valor" class="container__inserir__valor">
                         <label class="label__inserir__valor" for="valor" >Insira o valor</label>
                     </div>
+                    <div class="container__account">
+                        <h2>Conta</h2>
+                        <div class="container__types" >
+                            <div class="container__type__account selected__effect__checkbox" id="checkBoxInput__comum" >
+                                <label >Comum</label>
+                                
+                            </div>
+                            <div class="container__type__account" id="checkBoxInput__emergency" >
+                                <label >Emergêncial</label>
+                                
+                            </div>
+                        </div>
+                    </div>
                     <select id="select__tipo__transacao" class="select__tipo__transacao" >
                         <option value="" disabled selected>Tipo de Transação</option>
                         <option value="Saque" >Saque</option>
@@ -66,4 +79,68 @@ export const dynamicallyGenerateInput = () => {
   inputValue.oninput = (event) => oninputEvent(event);
 
   document.getElementById("container__inserir__valor").appendChild(inputValue);
+};
+
+export const checkBox = () => {
+  let checkBoxInputAccountEmergency = document.createElement("input");
+  let checkBoxInputAccountCommom = document.createElement("input");
+
+  checkBoxInputAccountCommom.type = "radio";
+  checkBoxInputAccountCommom.name = "type__account";
+  checkBoxInputAccountCommom.id = "commom__account";
+  checkBoxInputAccountCommom.value = "commom__account";
+  checkBoxInputAccountCommom.style = "cursor: pointer;";
+  checkBoxInputAccountCommom.checked = true;
+
+  checkBoxInputAccountCommom.onclick = () => {
+    document.getElementById("checkBoxInput__comum").className =
+      "container__type__account selected__effect__checkbox";
+    document.getElementById("checkBoxInput__emergency").className =
+      "container__type__account";
+  };
+
+  document
+    .getElementById("checkBoxInput__comum")
+    .addEventListener("click", () => {
+      document.getElementById("commom__account").checked = true;
+      document.getElementById("emergency__account").checked = false;
+
+      document.getElementById("checkBoxInput__comum").className =
+        "container__type__account selected__effect__checkbox";
+      document.getElementById("checkBoxInput__emergency").className =
+        "container__type__account";
+    });
+
+  document
+    .getElementById("checkBoxInput__emergency")
+    .addEventListener("click", () => {
+      document.getElementById("emergency__account").checked = true;
+      document.getElementById("commom__account").checked = false;
+
+      document.getElementById("checkBoxInput__emergency").className =
+        "container__type__account selected__effect__checkbox";
+      document.getElementById("checkBoxInput__comum").className =
+        "container__type__account";
+    });
+
+  checkBoxInputAccountEmergency.type = "radio";
+  checkBoxInputAccountEmergency.name = "type__account";
+  checkBoxInputAccountEmergency.style = "cursor: pointer;";
+  checkBoxInputAccountEmergency.value = "emergency__account";
+  checkBoxInputAccountEmergency.id = "emergency__account";
+
+  checkBoxInputAccountEmergency.onclick = () => {
+    document.getElementById("checkBoxInput__emergency").className =
+      "container__type__account selected__effect__checkbox";
+    document.getElementById("checkBoxInput__comum").className =
+      "container__type__account";
+  };
+
+  document
+    .getElementById("checkBoxInput__comum")
+    .appendChild(checkBoxInputAccountCommom);
+
+  document
+    .getElementById("checkBoxInput__emergency")
+    .appendChild(checkBoxInputAccountEmergency);
 };

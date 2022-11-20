@@ -22,10 +22,25 @@ document
 
     let endPoint = "";
 
-    if (transactionType === "saque")
-      endPoint = "/api/Transacao/transacao-saque";
-    if (transactionType === "deposito")
-      endPoint = "/api/Transacao/transacao-deposito";
+    if (transactionType === "saque") {
+      if (document.getElementById("emergency__account").checked) {
+        endPoint = "/api/Transacao/Emergency/transacao-saque";
+      }
+
+      if (document.getElementById("commom__account").checked) {
+        endPoint = "/api/Transacao/Commom/transacao-saque";
+      }
+    }
+
+    if (transactionType === "deposito") {
+      if (document.getElementById("emergency__account").checked) {
+        endPoint = "/api/Transacao/Emergency/transacao-deposito";
+      }
+
+      if (document.getElementById("commom__account").checked) {
+        endPoint = "/api/Transacao/Commom/transacao-deposito";
+      }
+    }
 
     let body = {
       valor: transactionValue,

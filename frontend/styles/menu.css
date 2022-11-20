@@ -49,7 +49,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   list-style: none;
   animation: normal animationInsert 2s;
 }
@@ -127,7 +127,7 @@
   0% {
     transform: rotateZ(0deg);
   }
-  25% {
+  30% {
     border-top: none;
   }
   50% {
