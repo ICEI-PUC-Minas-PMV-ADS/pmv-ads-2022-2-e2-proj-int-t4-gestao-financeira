@@ -24,12 +24,14 @@
     <script type="module">
 
       import {
-        registerOfExpenses
+        registerOfExpenses,
+        dynamicallyGenerateInput,
+        buttonTransaction
       } from "../src/pages/gestao__despesas.js";
 
       document.getElementById("container__principal").innerHTML = registerOfExpenses();
       dynamicallyGenerateInput();
-      checkBox();
+      buttonTransaction();
 
     </script>
     <script type="module" src="../src/index.js"></script>

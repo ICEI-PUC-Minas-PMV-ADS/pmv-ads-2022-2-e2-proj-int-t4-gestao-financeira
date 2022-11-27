@@ -1,28 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pedro.santos\\Estudos\\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\\backend\\src\\Gestão Financeira.csproj": {}
+    "C:\\Users\\Thiago A. Amorim\\Desktop\\trabalho faculdade\\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\\backend\\src\\Gestão Financeira.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pedro.santos\\Estudos\\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\\backend\\src\\Gestão Financeira.csproj": {
+    "C:\\Users\\Thiago A. Amorim\\Desktop\\trabalho faculdade\\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\\backend\\src\\Gestão Financeira.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pedro.santos\\Estudos\\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\\backend\\src\\Gestão Financeira.csproj",
+        "projectUniqueName": "C:\\Users\\Thiago A. Amorim\\Desktop\\trabalho faculdade\\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\\backend\\src\\Gestão Financeira.csproj",
         "projectName": "Gestão Financeira",
-        "projectPath": "C:\\Users\\pedro.santos\\Estudos\\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\\backend\\src\\Gestão Financeira.csproj",
-        "packagesPath": "C:\\Users\\pedro.santos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pedro.santos\\Estudos\\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\\backend\\src\\obj\\",
+        "projectPath": "C:\\Users\\Thiago A. Amorim\\Desktop\\trabalho faculdade\\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\\backend\\src\\Gestão Financeira.csproj",
+        "packagesPath": "C:\\Users\\Thiago A. Amorim\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Thiago A. Amorim\\Desktop\\trabalho faculdade\\pmv-ads-2022-2-e2-proj-int-t4-gestao-financeira\\backend\\src\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\pedro.santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Thiago A. Amorim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
         },
         "frameworks": {
           "net6.0": {
