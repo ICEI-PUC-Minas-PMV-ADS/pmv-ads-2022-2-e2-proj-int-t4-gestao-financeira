@@ -46,10 +46,10 @@ namespace Gestão_Financeira.Controllers
         }
 
         [HttpDelete("planejamento-deletar")]
-        public async Task<ActionResult> Deletar([FromBody] PlanejamentoCompraModel planejamentoCompra)
+        public async Task<ActionResult> Deletar([FromBody] int id)
         {
-            //_planejamentoCompraRepositorio.Deletar(planejamentoCompra);
-            //_itemRepositorio.Deletar(planejamentoCompra.Item);
+            //_planejamentoCompraRepositorio.Deletar(id);
+            //_itemRepositorio.Deletar(id);
 
             return Ok("Planejamento Deletado");
         }

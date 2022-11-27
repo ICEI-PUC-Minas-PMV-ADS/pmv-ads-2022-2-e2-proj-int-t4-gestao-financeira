@@ -7,6 +7,6 @@ namespace Gestão_Financeira.Repositorio
         public PlanejamentoCompraModel Cadastrar(PlanejamentoCompraModel planejamentoCompra);
         public PlanejamentoCompraModel Atualizar(PlanejamentoCompraModel planejamentoCompra);
         public PlanejamentoCompraModel Consultar(int id);
-        public void Deletar(PlanejamentoCompraModel planejamentoCompra);
+        public void Deletar(int id);
     }
 }

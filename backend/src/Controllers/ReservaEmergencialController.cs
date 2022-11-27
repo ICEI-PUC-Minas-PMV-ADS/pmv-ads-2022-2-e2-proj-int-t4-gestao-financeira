@@ -62,9 +62,9 @@ namespace Gestão_Financeira.Controllers
         }
 
         [HttpDelete("reserva-deletar")]
-        public async Task<ActionResult> Deletar([FromBody] ReservaEmergencialModel reservaEmergencialModel)
+        public async Task<ActionResult> Deletar([FromBody] int id)
         {
-            //_reservaEmergencialRepositorio.Deletar(reservaEmergencialModel);
+            //_reservaEmergencialRepositorio.Deletar(id);
 
             return Ok("Planejamento Deletado");
         }

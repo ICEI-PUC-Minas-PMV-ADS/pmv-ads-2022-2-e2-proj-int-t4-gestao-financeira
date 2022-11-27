@@ -18,7 +18,7 @@ namespace Gestão_Financeira.Controllers
         [HttpPost("objetivo-cadastrar")]
         public async Task<ActionResult> Cadastrar([FromBody] ObjetivoFinanceiroModel objetivoFinanceiro)
         {
-            _objetivoFinanceiroRepositorio.Cadastrar(objetivoFinanceiro);
+            //_objetivoFinanceiroRepositorio.Cadastrar(objetivoFinanceiro);
 
             return Created("Objeto planejamento Compra", objetivoFinanceiro);
         }
@@ -40,9 +40,9 @@ namespace Gestão_Financeira.Controllers
         }
 
         [HttpDelete("objetivo-deletar")]
-        public async Task<ActionResult> Deletar([FromBody] ObjetivoFinanceiroModel objetivoFinanceiro)
+        public async Task<ActionResult> Deletar([FromBody] int id)
         {
-            _objetivoFinanceiroRepositorio.Deletar(objetivoFinanceiro);
+            _objetivoFinanceiroRepositorio.Deletar(id);
 
             return Ok("Objetivo Deletado");
         }

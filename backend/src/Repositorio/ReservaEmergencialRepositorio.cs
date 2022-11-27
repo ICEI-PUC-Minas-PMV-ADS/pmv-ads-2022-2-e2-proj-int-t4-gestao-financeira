@@ -26,9 +26,9 @@ namespace Gestão_Financeira.Repositorio
             return reservaEmergencial;
         }
 
-        public void Deletar(ReservaEmergencialModel reservaEmergencial)
+        public void Deletar(int id)
         {
-            _context.ReservasEmergenciais.Remove(reservaEmergencial);
+            _context.ReservasEmergenciais.Remove(_context.ReservasEmergenciais.Where(x => x.Id == id).First());
             _context.SaveChanges();
         }
     }

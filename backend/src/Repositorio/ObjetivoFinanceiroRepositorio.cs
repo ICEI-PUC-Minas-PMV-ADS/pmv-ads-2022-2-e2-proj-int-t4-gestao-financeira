@@ -30,9 +30,9 @@ namespace Gestão_Financeira.Repositorio
             return _context.ObjetivosFinanceiros.Where(x => x.Id == id).First();
         }
 
-        public void Deletar(ObjetivoFinanceiroModel objetivoFinanceiro)
+        public void Deletar(int id)
         {
-            _context.ObjetivosFinanceiros.Remove(objetivoFinanceiro);
+            _context.ObjetivosFinanceiros.Remove(_context.ObjetivosFinanceiros.Where(x => x.Id == id).First());
             _context.SaveChanges();
         }
     }

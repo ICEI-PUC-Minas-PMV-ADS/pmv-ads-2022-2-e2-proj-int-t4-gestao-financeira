@@ -7,6 +7,6 @@ namespace Gestão_Financeira.Repositorio
         public ObjetivoFinanceiroModel Cadastrar(ObjetivoFinanceiroModel objetivoFinanceiro);
         public ObjetivoFinanceiroModel Atualizar(ObjetivoFinanceiroModel objetivoFinanceiro);
         public ObjetivoFinanceiroModel Consultar(int id);
-        public void Deletar(ObjetivoFinanceiroModel objetivoFinanceiro);
+        public void Deletar(int id);
     }
 }

@@ -14,6 +14,7 @@ builder.Services.AddScoped<ISaldoContaRepositorio, SaldoContaRepositorio>();
 builder.Services.AddScoped<IReservaEmergencialRepositorio, ReservaEmergencialRepositorio>();
 builder.Services.AddScoped<IItemRepositorio, ItemRepositorio>();
 builder.Services.AddScoped<IPlanejamentoCompraRepositorio, PlanejamentoCompraRepositorio>();
+builder.Services.AddScoped<IObjetivoFinanceiroRepositorio, ObjetivoFinanceiroRepositorio>();
 
 
 // Add services to the container.

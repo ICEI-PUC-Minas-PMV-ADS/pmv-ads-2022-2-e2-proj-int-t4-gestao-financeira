@@ -26,9 +26,10 @@ namespace Gestão_Financeira.Repositorio
             return item;
         }
 
-        public void Deletar(ItemModel item)
+        public void Deletar(int id)
         {
-            _context.Itens.Remove(item);
+            var itemId = _context.PlanejamentosCompras.Where(x => x.Id == id).First().ItemId;
+            _context.Itens.Remove(_context.Itens.Where(x => x.Id == itemId).First());
             _context.SaveChanges();
         }
 
