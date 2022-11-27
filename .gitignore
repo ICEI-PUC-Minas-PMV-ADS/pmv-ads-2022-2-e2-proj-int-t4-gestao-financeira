@@ -3,9 +3,15 @@
 *.v2
 *.1
 *.1
-backend/src/.vs/Gestão Financeira/v17/.suo
+*.suo
 *.v2
 *.1
 *.dll
 *.dll
 *.sentinel
+*.testlog
+*.manifest
+*.pdb
+*.cache
+*.editorconfig
+
