@@ -46,8 +46,6 @@ const menuLateral = () => {
       containerItemsList.appendChild(reload);
 
       setTimeout(() => {
-        window.location.href = links.url;
-
         let containerPrincipal = document.getElementById(
           "container__principal"
         );
@@ -55,6 +53,10 @@ const menuLateral = () => {
         containerPrincipal.prepend(menuHamburguer());
         
       }, 2000);
+
+      setTimeout(() => {
+        window.location.href = links.url;
+      }, 1300);
     });
 
     containerItemsList.appendChild(containerItems);

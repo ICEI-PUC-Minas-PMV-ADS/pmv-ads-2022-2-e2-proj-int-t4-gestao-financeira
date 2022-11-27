@@ -210,3 +210,14 @@
     cursor: pointer;
     text-shadow: 1px 1px 3px #222222;
 }
+
+.container__value__and__buttons__expenditure button {
+    background: transparent;
+    background-color: transparent;
+    color: rgb(160, 160, 160);
+    padding: 5px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 1px 1px 3px #222222;
+}

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="../styles/gestao__saldo.css" />
+    <link rel="stylesheet" href="../styles/gestao__despesas.css" />
     <link rel="stylesheet" href="../styles/menu.css" />
 
     <style>
@@ -24,12 +24,10 @@
     <script type="module">
 
       import {
-        getaoSaldo,
-        dynamicallyGenerateInput,
-        checkBox,
-      } from "../src/pages/gestao__saldo.js";
+        registerOfExpenses
+      } from "../src/pages/gestao__despesas.js";
 
-      document.getElementById("container__principal").innerHTML = getaoSaldo();
+      document.getElementById("container__principal").innerHTML = registerOfExpenses();
       dynamicallyGenerateInput();
       checkBox();
 
