@@ -60,5 +60,13 @@ namespace Gestão_Financeira.Controllers
             var result = _transacaoController.Sacar(transacao);
             return Ok(_saldoReserva);
         }
+
+        [HttpDelete("reserva-deletar")]
+        public async Task<ActionResult> Deletar([FromBody] ReservaEmergencialModel reservaEmergencialModel)
+        {
+            //_reservaEmergencialRepositorio.Deletar(reservaEmergencialModel);
+
+            return Ok("Planejamento Deletado");
+        }
     }
 }

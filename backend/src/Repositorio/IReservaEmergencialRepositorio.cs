@@ -6,5 +6,6 @@ namespace Gestão_Financeira.Repositorio
     {
         public ReservaEmergencialModel Cadastrar(ReservaEmergencialModel reservaEmergencial);
         public ReservaEmergencialModel Atualizar(ReservaEmergencialModel reservaEmergencial);
+        public void Deletar(ReservaEmergencialModel reservaEmergencial);
     }
 }
