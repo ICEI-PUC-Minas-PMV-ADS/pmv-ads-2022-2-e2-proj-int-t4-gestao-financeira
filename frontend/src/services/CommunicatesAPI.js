@@ -1,10 +1,12 @@
 export class CommunicateAPI {
   #url;
+  #endPoint;
   #idUser;
 
   constructor(endPoint, idUser) {
-    this.#url = `http://localhost/${endPoint}`;
+    this.#url = `https://localhost:7055/api`;
     this.#idUser = idUser;
+    this.#endPoint = endPoint;
   }
 
   async get() {
@@ -16,7 +18,12 @@ export class CommunicateAPI {
     };
 
     try {
-      fetch(`${this.#url}/${this.#idUser}`, options)
+      fetch(`${this.#url}/${this.#endPoint}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8'
+        }
+      })
         .then((value) => {
           return value;
         })
@@ -38,7 +45,7 @@ export class CommunicateAPI {
     };
 
     try {
-      fetch(`${this.#url}`, options)
+      fetch(`${this.#url}/${this.#endPoint}/${this.#idUser}`, options)
         .then((value) => {
           return value;
         })
@@ -59,7 +66,7 @@ export class CommunicateAPI {
     };
 
     try {
-      fetch(`${this.#url}/${this.#idUser}`, options)
+      fetch(`${this.#url}/${this.#endPoint}/${this.#idUser}`, options)
         .then((value) => {
           return value;
         })
@@ -83,7 +90,7 @@ export class CommunicateAPI {
     };
 
     try {
-      fetch(`${this.#url}/${this.#idUser}`, options)
+      fetch(`${this.#url}/${this.#endPoint}/${this.#idUser}`, options)
         .then((value) => {
           return value;
         })

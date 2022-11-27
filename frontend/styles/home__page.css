@@ -60,8 +60,8 @@
 }
 
 .buttons__home__page button:hover {
-    background-color: rgba(145, 145, 145, 0.2);
+    background-color: rgb(160, 160, 160);
     color: rgb(35, 35, 35);
     font-size: 13px;
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(20, 20, 20, 0.5);
 }
