@@ -10,10 +10,8 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Integrantes
 
-* Gabriel Alexandre Medrado Alves;
 * Leonardo Silva Jaques;
 * Pedro Freitas;
-* Tássia de Lima Teixeira;
 * Thiago Almeida Amorim;
 
 ## Carlos Alberto Marques Pietrobon
