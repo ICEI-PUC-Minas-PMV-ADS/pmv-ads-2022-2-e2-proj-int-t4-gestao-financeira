@@ -5,7 +5,7 @@ const closedMenu = () => {
     "container__items__list__menu__side"
   );
 
-  containerItemsList.style.animation = "normal animationSideMenuClose 2s";
+  containerItemsList.style.animation = "normal animationClose 2s";
 
   setTimeout(() => {
     let containerPrincipal = document.getElementById("container__principal");
@@ -39,7 +39,20 @@ const menuLateral = () => {
     items.className = "items__menu__side";
 
     containerItems.addEventListener("click", () => {
-      window.location.href = links.url;
+      containerItemsList.innerHTML = "";
+      let reload = document.createElement("div");
+      reload.className = "reloading";
+
+      containerItemsList.appendChild(reload);
+
+      setTimeout(() => {
+        let containerPrincipal = document.getElementById(
+          "container__principal"
+        );
+        containerPrincipal.removeChild(containerItemsList);
+        containerPrincipal.prepend(menuHamburguer());
+        window.location.href = links.url;
+      }, 2000);
     });
 
     containerItemsList.appendChild(containerItems);
