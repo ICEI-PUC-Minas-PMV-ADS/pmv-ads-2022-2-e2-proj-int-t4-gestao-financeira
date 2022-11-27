@@ -21,6 +21,11 @@ builder.Services.AddScoped<IObjetivoFinanceiroRepositorio, ObjetivoFinanceiroRep
 builder.Services.AddControllersWithViews();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(c => c.AddPolicy("corspolicy", build =>
+{
+    build.WithOrigins("*").AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin();
+}));
+
 var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI(c =>
@@ -42,12 +47,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseCors(c =>
-{
-    c.AllowAnyHeader();
-    c.AllowAnyMethod();
-    c.AllowAnyOrigin();
-});
+app.UseCors("corspolicy");
 
 app.UseAuthorization();
 
