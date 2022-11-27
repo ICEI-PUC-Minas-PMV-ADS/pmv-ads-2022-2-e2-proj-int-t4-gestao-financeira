@@ -167,3 +167,50 @@
     flex-direction: column;
   }
 }
+
+.container__account {
+  width: 100%;
+  display: flex;
+  margin: 25px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.container__account h2 {
+  font-size: 13px;
+  font-weight: bold;
+  color: rgb(180, 180, 180);
+  text-shadow: 0.5px 0.5px 3px black;
+  margin-bottom: 8px;
+}
+
+.selected__effect__checkbox {
+  border: solid 2px rgba(180, 180, 180, 0.5);
+  border-radius: 5px;
+}
+
+.container__types {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container__type__account {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0px 10px;
+  padding: 6px 0px;
+}
+
+.container__type__account label {
+  font-size: 11px;
+  font-weight: bold;
+  color: rgb(180, 180, 180);
+  text-shadow: 0.5px 0.5px 3px black;
+  margin-bottom: 5px;
+}
