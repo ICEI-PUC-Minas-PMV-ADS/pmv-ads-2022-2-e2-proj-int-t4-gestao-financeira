@@ -27,16 +27,7 @@ export const registerOfExpenses = () => {
                 <div class="container__input__expenditure" id="container__input__expenditure" ></div>
                     <button id="button__add__expenditure" >Adicionar</button>
                 </form>
-                <div class="container__list__expenditure" >
-                <div class="list__expenditure">
-                    <h2>Contas de Luz</h2>
-                    <p>R$: 250,00</p>
-                    <div class="container__value__and__buttons__expenditure" >
-                    <button>Editar</button>
-                    <button>Deletar</button>
-                    </div>
-                </div>
-            </div>
+                <div id="container__list__expenditure" class="container__list__expenditure" ></div>
             <footer id="contianer__footer__expenditure" class="contianer__footer__expenditure">
                 <button id="button__clear" >Limpar Todos</button>
             </footer>
@@ -63,6 +54,33 @@ export const dynamicallyGenerateInput = () => {
 };
 
 export const buttonTransaction = () => {
+
+    document.getElementById('button__add__expenditure').addEventListener('click', (e) => {
+      e.preventDefault();
+
+      let expenditureItem = document.createElement('div');
+      expenditureItem.className = 'list__expenditure';
+
+      let titleItem = document.createElement('h2');
+      titleItem.innerText = 'Contas de Luz';
+
+      let valueItem = document.createElement('p');
+      valueItem.innerText = 'R$: 250,00';
+
+      let containerValueButons = document.createElement('div');
+      containerValueButons.className = 'container__value__and__buttons__expenditure';
+
+      let buttonEdit = document.createElement('button');
+      let buttonDelete = document.createElement('button');
+
+      expenditureItem.appendChild(titleItem);
+      expenditureItem.appendChild(valueItem);
+      expenditureItem.appendChild(containerValueButons);
+      containerValueButons.appendChild(buttonEdit);
+      containerValueButons.appendChild(buttonDelete);
+
+      document.getElementById('container__list__expenditure').appendChild(expenditureItem);
+    }); 
 
     let transactionType = '';
 
