@@ -2,9 +2,11 @@ import { CommunicateAPI } from "../services/CommunicatesAPI.js";
 import { oninputEvent } from "../utils/format__currency.js";
 
 export const getaoSaldo = () => {
-  const { novoSaldo, historicoTransacao } = new CommunicateAPI(
-    "/api/Transacao/transacao-deposito"
-  ).get();
+  const { novoSaldo, historicoTransacao } = new CommunicateAPI("Transacao/transacao-saldo").get();
+
+  const teste = () => {
+    console.log('teste')
+  }
 
   return `    
         <div class="container__gestao__saldo" >
@@ -36,7 +38,7 @@ export const getaoSaldo = () => {
                     </div>
                 </div>
             </div>
-            <div class="container__adiciona__saldo">
+            <div id="container__adiciona__saldo" class="container__adiciona__saldo">
                 <div class="container__inputs__inserir__valor">
                     <div id="container__inserir__valor" class="container__inserir__valor">
                         <label class="label__inserir__valor" for="valor" >Insira o valor</label>
@@ -60,7 +62,6 @@ export const getaoSaldo = () => {
                         <option value="Deposito" >Deposito</option>
                     </select>
                 </div>
-                <button id="button__inserir__valor" class="button__inserir__valor">+</button>
             </div>
         </div>
     `;
@@ -143,4 +144,71 @@ export const checkBox = () => {
   document
     .getElementById("checkBoxInput__emergency")
     .appendChild(checkBoxInputAccountEmergency);
+};
+
+export const buttonTransaction = () => {
+  
+  const newButton = document.createElement('button');
+  newButton.className = 'button__inserir__valor';
+  newButton.innerText = '+';
+  
+  newButton.onclick = () => {
+    //Pega o valor o input para seleção do tipo de transação
+    let transactionType = document.getElementById(
+      "select__tipo__transacao"
+    ).value;
+
+    //Pega o valor do input para inserção de valores.
+    let transactionValue = document.getElementById("input__valor").value
+
+    //Se não tiver nenhum valor para ser inserido ou subtraído
+    if (!transactionValue) {
+      alert("É necessário informar o valor da transação para continuar.")
+      return new Error("É necessário informar o valor da transação.");
+    }
+
+    //Transforma de string em número com casas decimais
+    transactionValue = parseFloat(transactionValue.split(' ')[1].replace('.', '').replace(',','.'));
+
+    //Se não tiver sido selecionada nenhuma transação;
+    if (!transactionType) {
+      alert("É necessário selecionar um tipo de transação para continuar")
+      return new Error("É necessário selecionar um tipo de transação para continuar.");
+    };
+
+    let endPoint = "";
+
+    //Verifica se é uma transação do tipo "Saque"
+    if (transactionType === "saque") {
+      //Saque emergencial
+      if (document.getElementById("emergency__account").checked) {
+        endPoint = "ReservaEmergencial/reserva-saque";
+      }
+
+      //Saque comum
+      if (document.getElementById("commom__account").checked) {
+        endPoint = "Transacao/transacao-saque";
+      }
+    }
+
+    //Verifica se é uma transação do tipo "Deposito"
+    if (transactionType === "deposito") {
+      //Saque comum
+      if (document.getElementById("emergency__account").checked) {
+        endPoint = "ReservaEmergencial/reserva-deposito";
+      }
+
+      //Deposito comum
+      if (document.getElementById("commom__account").checked) {
+        endPoint = "Transacao/transacao-deposito";
+      }
+    }
+
+    let body = {
+      valor: transactionValue,
+      tipoTransacao: transactionType,
+    };
+  };
+
+  document.getElementById('container__adiciona__saldo').appendChild(newButton);
 };
