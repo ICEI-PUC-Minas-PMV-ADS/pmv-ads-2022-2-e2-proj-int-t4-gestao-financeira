@@ -11,14 +11,14 @@ namespace Gestão_Financeira.Controllers
         private readonly ITransacaoRepositorio _transacaoRepositorio;
         private static float _saldo = 0;
 
-        public TransacaoController(ITransacaoRepositorio transacaoRepositorio){
+        public TransacaoController(ITransacaoRepositorio transacaoRepositorio) {
             _transacaoRepositorio = transacaoRepositorio;
         }
 
         [HttpPost("transacao-deposito")]
         public async Task<ActionResult> Depositar([FromBody] TransacaoModel transacao)
         {
-            if (string.IsNullOrEmpty(transacao.TipoTransacao))
+            if (string.IsNullOrEmpty(transacao.TipoTransacao) || transacao.TipoTransacao.Equals("string"))
             {
                 transacao.TipoTransacao = "deposito";
             }
@@ -46,7 +46,7 @@ namespace Gestão_Financeira.Controllers
 
         [HttpPost("transacao-saque")]
         public async Task<ActionResult> Sacar([FromBody]TransacaoModel transacao) {
-            if (string.IsNullOrEmpty(transacao.TipoTransacao))
+            if (string.IsNullOrEmpty(transacao.TipoTransacao) || transacao.TipoTransacao.Equals("string"))
             {
                 transacao.TipoTransacao = "saque";
             }
