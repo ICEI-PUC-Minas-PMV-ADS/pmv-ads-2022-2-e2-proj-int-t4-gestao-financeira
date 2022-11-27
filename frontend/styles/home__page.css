@@ -1,0 +1,67 @@
+.home__page {
+    height: 100vh;
+    background: linear-gradient( rgb(115, 115, 115), rgb(100, 100, 100), rgb(75, 75, 75), rgb(60, 60, 60), rgb(45, 45, 45), rgb(30, 30, 30), rgb(15, 15, 15), black );
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.home__page h1 {
+    color: rgb(160, 160, 160);
+    padding: 5px;
+    text-shadow: 0.5px 0.5px 3px black;
+}
+
+.container__img img {
+    padding: 20px;
+}
+
+.container__img img {
+    width: 250px;
+    filter: brightness(70%);
+}
+
+.container__descripition {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container__descripition p {
+    color: rgb(135, 135, 135);
+    padding: 5px;
+    text-shadow: 0.5px 0.5px 3px black;
+}
+
+.buttons__home__page {
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    flex-wrap: wrap;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buttons__home__page button {
+    background-color: transparent;    
+    color: rgb(160, 160, 160);
+    border: 2px solid rgb(160, 160, 160);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buttons__home__page button:hover {
+    background-color: rgba(145, 145, 145, 0.2);
+    color: rgb(35, 35, 35);
+    font-size: 13px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+}

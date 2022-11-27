@@ -9,21 +9,29 @@ namespace Gestão_Financeira.Controllers
     public class TransacaoController : ControllerBase
     {
         private readonly ITransacaoRepositorio _transacaoRepositorio;
-        private static float _saldo = 0; //Remover futuramente, o correto é fazermos a manutenção do saldo na entidade SaldoConta
+        private static float _saldo = 0;
 
         public TransacaoController(ITransacaoRepositorio transacaoRepositorio){
             _transacaoRepositorio = transacaoRepositorio;
         }
 
-        [HttpPost("transacao-saque")]
-        public async Task<ActionResult> Sacar([FromBody]TransacaoModel transacao) {
+        [HttpPost("transacao-deposito")]
+        public async Task<ActionResult> Depositar([FromBody] TransacaoModel transacao)
+        {
+            if (string.IsNullOrEmpty(transacao.TipoTransacao))
+            {
+                transacao.TipoTransacao = "deposito";
+            }
 
-            if(transacao.Valor > _saldo)
-                return BadRequest("O valor de saque não pode ser maior que o valor de saldo.");
+            if (transacao.Valor <= 0 && transacao.TipoTransacao.ToLower().Equals("deposito"))
+                return BadRequest("O valor de deposito deve ser superior que zero.");
 
-            _transacaoRepositorio.Sacar(transacao);
-            _saldo = _saldo - transacao.Valor;
+            if (transacao.TipoTransacao.ToLower().Equals("deposito"))
+            {
+                _saldo = _saldo + transacao.Valor;
+            }
 
+            //_transacaoRepositorio.Depositar(transacao);
             var historicoTransacao = new List<TransacaoModel>();
             historicoTransacao.Add(transacao);
 
@@ -36,16 +44,21 @@ namespace Gestão_Financeira.Controllers
             return Created("Objeto transacao", transacaoResponse);
         }
 
-        [HttpPost("transacao-deposito")]
-        public async Task<ActionResult> Depositar([FromBody] TransacaoModel transacao)
-        {
+        [HttpPost("transacao-saque")]
+        public async Task<ActionResult> Sacar([FromBody]TransacaoModel transacao) {
+            if (string.IsNullOrEmpty(transacao.TipoTransacao))
+            {
+                transacao.TipoTransacao = "saque";
+            }
 
-            if (transacao.Valor <= 0)
-                return BadRequest("O valor de deposito deve ser superior que zero.");
+            if (transacao.Valor > _saldo && transacao.TipoTransacao.ToLower().Equals("saque"))
+                return BadRequest("O valor de saque não pode ser maior que o valor de saldo.");
 
-            _transacaoRepositorio.Depositar(transacao);
-            _saldo = _saldo + transacao.Valor;
+            if (transacao.TipoTransacao.ToLower().Equals("saque")){
+                _saldo = _saldo - transacao.Valor;
+            }
 
+            //_transacaoRepositorio.Sacar(transacao);
             var historicoTransacao = new List<TransacaoModel>();
             historicoTransacao.Add(transacao);
 

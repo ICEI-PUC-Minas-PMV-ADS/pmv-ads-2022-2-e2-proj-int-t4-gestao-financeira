@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../styles/gestao__saldo.css" />
+    <link rel="stylesheet" href="../styles/menu.css" />
+
+    <style>
+        * {
+          padding: 0;
+          margin: 0;
+          border: 0;
+          box-sizing: border-box;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+      </style>
+  </head>
+  <body>
+    <section id="container__principal"></section>
+    <script type="module">
+
+      import {
+        getaoSaldo,
+        dynamicallyGenerateInput,
+        checkBox,
+      } from "../src/pages/gestao__saldo.js";
+
+      document.getElementById("container__principal").innerHTML = getaoSaldo();
+      dynamicallyGenerateInput();
+      checkBox();
+
+    </script>
+    <script type="module" src="../src/index.js"></script>
+  </body>
+</html>

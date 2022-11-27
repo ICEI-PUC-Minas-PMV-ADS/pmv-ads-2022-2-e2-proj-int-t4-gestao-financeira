@@ -11,6 +11,9 @@ builder.Services.AddEntityFrameworkSqlServer().AddDbContext<BancoContext>(option
 builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 builder.Services.AddScoped<ITransacaoRepositorio, TransacaoRepositorio>();
 builder.Services.AddScoped<ISaldoContaRepositorio, SaldoContaRepositorio>();
+builder.Services.AddScoped<IReservaEmergencialRepositorio, ReservaEmergencialRepositorio>();
+builder.Services.AddScoped<IItemRepositorio, ItemRepositorio>();
+builder.Services.AddScoped<IPlanejamentoCompraRepositorio, PlanejamentoCompraRepositorio>();
 
 
 // Add services to the container.

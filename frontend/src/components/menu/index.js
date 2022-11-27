@@ -51,8 +51,12 @@ const menuLateral = () => {
         );
         containerPrincipal.removeChild(containerItemsList);
         containerPrincipal.prepend(menuHamburguer());
-        window.location.href = links.url;
+        
       }, 2000);
+
+      setTimeout(() => {
+        window.location.href = links.url;
+      }, 1300);
     });
 
     containerItemsList.appendChild(containerItems);
