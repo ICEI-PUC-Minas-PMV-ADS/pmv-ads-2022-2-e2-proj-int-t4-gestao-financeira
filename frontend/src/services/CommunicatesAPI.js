@@ -4,7 +4,7 @@ export class CommunicateAPI {
   #idUser;
 
   constructor(endPoint, idUser) {
-    this.#url = `https://localhost:7055/api`;
+    this.#url = `http://localhost:5055/api`;
     this.#idUser = idUser;
     this.#endPoint = endPoint;
   }
@@ -18,12 +18,7 @@ export class CommunicateAPI {
     };
 
     try {
-      fetch(`${this.#url}/${this.#endPoint}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json;charset=utf-8'
-        }
-      })
+      fetch(`${this.#url}/${this.#endPoint}`, options)
         .then((value) => {
           return value;
         })
