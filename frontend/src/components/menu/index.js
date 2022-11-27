@@ -46,12 +46,14 @@ const menuLateral = () => {
       containerItemsList.appendChild(reload);
 
       setTimeout(() => {
+        window.location.href = links.url;
+
         let containerPrincipal = document.getElementById(
           "container__principal"
         );
         containerPrincipal.removeChild(containerItemsList);
         containerPrincipal.prepend(menuHamburguer());
-        window.location.href = links.url;
+        
       }, 2000);
     });
 

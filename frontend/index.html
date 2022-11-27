@@ -6,12 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="./styles/gestao__saldo.css" />
-    <link rel="stylesheet" href="./styles/menu.css" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+
+    <link rel="stylesheet" href="./styles/home__page.css">
+
   </head>
   <body>
-    <section id="container__principal"></section>
-    <script type="module" src="./src/index.js"></script>
-    <script type="module" src="./src/utils/realiza__transacao.js"></script>
+    <section class="home__page">
+      <h1>Financial Management Person</h1>
+      <div class="container__descripition">
+        <div class="container__img">
+          <img src="./imgs/Meu projeto.png" alt="">
+        </div>
+        <div class="buttons__home__page">
+          <button id="new__acount" >Cadastre-se</button>
+          <button id="enter__acount">Faça login</button>
+        </div>
+        <p>
+          Está buscando por um aplicativo que te ajude na sua gestão financeira de maneira simples e intuitiva?
+          <br>  <br>
+          Então você veio ao lugar certo!
+        </p>  
+      </divc>
+    </section>
+
+
+    <script>
+      document.getElementById('enter__acount').addEventListener('click', () => { window.location.href = 'http://127.0.0.1:5500/frontend/pages/gestao__saldo.html' });
+      document.getElementById('new__acount').addEventListener('click', () => { window.location.href = '' });
+    </script>
   </body>
 </html>
