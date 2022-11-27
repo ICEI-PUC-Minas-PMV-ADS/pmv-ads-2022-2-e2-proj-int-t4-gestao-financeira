@@ -10,7 +10,6 @@ namespace Gestão_Financeira.Controllers
     {
         private readonly IPlanejamentoCompraRepositorio _planejamentoCompraRepositorio;
         private readonly IItemRepositorio _itemRepositorio;
-        private static float _saldoReserva = 0;
 
         public PlanejamentoCompraController(IPlanejamentoCompraRepositorio planejamentoCompraRepositorio, ItemRepositorio itemRepositorio)
         {
