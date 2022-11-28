@@ -20,5 +20,7 @@ namespace Gestão_Financeira.Data
         public DbSet<PlanejamentoCompraModel> PlanejamentosCompras { get; set; }
         public DbSet<ItemModel> Itens { get; set; }
         public DbSet<ObjetivoFinanceiroModel> ObjetivosFinanceiros { get; set; }
+        public DbSet<DespesaComumModel> DespesasComuns { get; set; }
+        public DbSet<DespesaVariavelModel> DespesasVariaveis { get; set; }
     }
 }
