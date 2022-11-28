@@ -60,7 +60,100 @@ export const dynamicallyGenerateInput = () => {
 
 export const buttonTransaction = () => {
 
-  let arrayItens = [];
+  let arrayItensDespesaVariavel = [];
+  let arrayItensDespesaFixa = [];
+  let transactionType = '';
+
+  const generateItemsInitialOrAlternateType = (arrayItems) => {
+    arrayItems.map(item => {
+      let itemList = document.createElement('div');
+
+      itemList.className = 'list__expenditure';
+      itemList.id = item.id;
+
+      itemList.innerHTML = `
+        <h2>${item.nome}</h2>
+        <p>R$ ${item.value}</p>
+        <div id="container__value__and__buttons__expenditure" class="container__value__and__buttons__expenditure"></div>
+      `;
+
+      let buttonDelete = document.createElement('button');
+      buttonDelete.innerText = 'Deletar';
+      buttonDelete.id = 'button__delete';
+  
+      buttonDelete.onclick = () => {
+        let paiButtonDelete = buttonDelete.parentNode;
+        let avoButtonDelete = paiButtonDelete.parentNode;
+        avoButtonDelete.parentNode.removeChild(avoButtonDelete);
+
+        if (transactionType === 'variavel') {
+          arrayItensDespesaVariavel = arrayItensDespesaVariavel.filter(itemArray => itemArray.id !== parseInt(avoButtonDelete.id) - 1);
+          document.getElementById('quantidade__itens').innerText = `${arrayItensDespesaVariavel.length}`
+        } else {
+          arrayItensDespesaFixa = arrayItensDespesaFixa.filter(itemArray => itemArray.id !== parseInt(avoButtonDelete.id) - 1);
+          document.getElementById('quantidade__itens').innerText = `${arrayItensDespesaFixa.length}`
+        }
+      };
+
+      document.getElementById('container__list__expenditure').prepend(itemList);
+      document.getElementById('container__value__and__buttons__expenditure').appendChild(buttonDelete);
+    });
+  };
+
+  const genereteItem = (values) => {
+    let expenditureItem = document.createElement('div');
+    expenditureItem.className = 'list__expenditure';
+
+    let titleItem = document.createElement('h2');
+    titleItem.innerText = values.title;
+
+    let valueItem = document.createElement('p');
+    valueItem.innerText = `R$ ${values.value}`;
+
+    let containerValueButons = document.createElement('div');
+    containerValueButons.className = 'container__value__and__buttons__expenditure';
+
+    let buttonDelete = document.createElement('button');
+    buttonDelete.innerText = 'Deletar';
+    buttonDelete.id = 'button__delete';
+
+    buttonDelete.onclick = () => {
+      let paiButtonDelete = buttonDelete.parentNode;
+      let avoButtonDelete = paiButtonDelete.parentNode;
+      avoButtonDelete.parentNode.removeChild(avoButtonDelete);
+
+      if (transactionType === 'variavel') {
+        arrayItensDespesaVariavel = arrayItensDespesaVariavel.filter(item => item.id !== parseInt(avoButtonDelete.id) - 1);
+        document.getElementById('quantidade__itens').innerText = `${arrayItensDespesaVariavel.length}`
+      } else {
+        arrayItensDespesaFixa = arrayItensDespesaFixa.filter(item => item.id !== parseInt(avoButtonDelete.id) - 1);
+        document.getElementById('quantidade__itens').innerText = `${arrayItensDespesaFixa.length}`
+      }
+    };
+
+    expenditureItem.appendChild(titleItem);
+    expenditureItem.appendChild(valueItem);
+
+    containerValueButons.appendChild(buttonDelete);
+
+    expenditureItem.appendChild(containerValueButons);
+
+    if (transactionType === 'variavel') {
+      arrayItensDespesaVariavel.push({ nome: values.title, value: values.value, id: arrayItensDespesaVariavel.length + 1 });
+      document.getElementById('quantidade__itens').innerText = `${arrayItensDespesaVariavel.length}`
+      expenditureItem.id = `${arrayItensDespesaVariavel.length + 1}`;
+    } else {
+      arrayItensDespesaFixa.push({ nome: values.title, value: values.value, id: arrayItensDespesaFixa.length + 1 });
+      document.getElementById('quantidade__itens').innerText = `${arrayItensDespesaFixa.length}`
+      expenditureItem.id = `${arrayItensDespesaFixa.length + 1}`;
+    }
+
+    document.getElementById('container__list__expenditure').prepend(expenditureItem);
+    inputValue.value = '';
+    inputText.value = '';
+  };
+
+  
 
     document.getElementById('button__add__expenditure').addEventListener('click', (e) => {
       e.preventDefault();
@@ -80,71 +173,45 @@ export const buttonTransaction = () => {
         return new Error("É necessário informar o valor da despesa.");
       };
 
-      let expenditureItem = document.createElement('div');
-      expenditureItem.className = 'list__expenditure';
-
-      let titleItem = document.createElement('h2');
-      titleItem.innerText = itemTitle;
-
-      let valueItem = document.createElement('p');
-      valueItem.innerText = `R$ ${itemValue}`;
-
-      let containerValueButons = document.createElement('div');
-      containerValueButons.className = 'container__value__and__buttons__expenditure';
-
-      let buttonDelete = document.createElement('button');
-      buttonDelete.innerText = 'Deletar';
-      buttonDelete.id = 'button__delete';
-
-      buttonDelete.onclick = () => {
-        let paiButtonDelete = buttonDelete.parentNode;
-        let avoButtonDelete = paiButtonDelete.parentNode;
-        avoButtonDelete.parentNode.removeChild(avoButtonDelete);
-        arrayItens = arrayItens.filter(item => item.id !== parseInt(avoButtonDelete.id) - 1);
-        document.getElementById('quantidade__itens').innerText = `${arrayItens.length}`
-      };
-
-      expenditureItem.appendChild(titleItem);
-      expenditureItem.appendChild(valueItem);
-
-      containerValueButons.appendChild(buttonDelete);
-
-      expenditureItem.appendChild(containerValueButons);
-      
       //Transforma de string em número com casas decimais
       itemValue = parseFloat(itemValue.split(' ')[1].replace('.', '').replace(',','.'));
 
-      arrayItens.push({ nome: itemTitle, value: itemValue, id: arrayItens.length + 1 });
+      genereteItem({ value: itemValue, title: itemTitle });
 
-      document.getElementById('quantidade__itens').innerText = `${arrayItens.length}`
-
-      expenditureItem.id = `${arrayItens.length + 1}`;
-
-      document.getElementById('container__list__expenditure').prepend(expenditureItem);
-      inputValue.value = '';
-      inputText.value = '';
     }); 
 
-    document.getElementById('button__clear').addEventListener('click', () => {
-      arrayItens = [];
-      document.getElementById('container__list__expenditure').innerHTML = '';
-      document.getElementById('quantidade__itens').innerText = `${arrayItens.length}`
-    });
-
-    let transactionType = '';
+    if (transactionType === 'variavel') {
+      document.getElementById('button__clear').addEventListener('click', () => {
+        arrayItensDespesaVariavel = [];
+        document.getElementById('container__list__expenditure').innerHTML = '';
+        document.getElementById('quantidade__itens').innerText = `${arrayItensDespesaVariavel.length}`
+      });
+    } else {
+      document.getElementById('button__clear').addEventListener('click', () => {
+        arrayItensDespesaFixa = [];
+        document.getElementById('container__list__expenditure').innerHTML = '';
+        document.getElementById('quantidade__itens').innerText = `${arrayItensDespesaFixa.length}`
+      });
+    }
 
     let buttonExpenditureVariavel = document.getElementById('botao__expenditure__variaveis');
     let buttonExpenditureFixa = document.getElementById('botao__expenditure__fixas');
 
     buttonExpenditureVariavel.addEventListener('click', () => { 
+        document.getElementById('container__list__expenditure').innerHTML = '';
         transactionType = 'variavel';
+        document.getElementById('quantidade__itens').innerText = `${arrayItensDespesaVariavel.length}`
         buttonExpenditureFixa.className = '';
+        generateItemsInitialOrAlternateType(arrayItensDespesaVariavel);
         buttonExpenditureVariavel.className = 'SelectedExpenditure'; 
     });
 
     buttonExpenditureFixa.addEventListener('click', () => { 
+        document.getElementById('container__list__expenditure').innerHTML = '';
         transactionType = 'fixa';
+        document.getElementById('quantidade__itens').innerText = `${arrayItensDespesaFixa.length}`
         buttonExpenditureVariavel.className = ''; 
+        generateItemsInitialOrAlternateType(arrayItensDespesaFixa);
         buttonExpenditureFixa.className = 'SelectedExpenditure';
     });
   
