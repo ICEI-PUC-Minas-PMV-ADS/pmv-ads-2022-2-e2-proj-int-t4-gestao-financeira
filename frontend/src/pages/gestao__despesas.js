@@ -9,7 +9,7 @@ export const registerOfExpenses = () => {
             <div class="container__list__initial" >
             <header class="container__header__expenditure" >
                 <div class="quantidade__itens" >
-                    <p>10</p>
+                    <p id="quantidade__itens" >0</p>
                 </div>
                 <div class="valor__total__expenditure" >
                     <p>R$ 1.000,00</p>
@@ -20,12 +20,10 @@ export const registerOfExpenses = () => {
                 </div>
             </header>
             <div class="container__form__and__list__expenditure" >
-                <form class="form__expenditure">
-                <div class="container__input__expenditure" >
-                    <input type="text" placeholder="Título da despesa..." >
-                </div>
-                <div class="container__input__expenditure" id="container__input__expenditure" ></div>
-                    <button id="button__add__expenditure" >Adicionar</button>
+                <form id="form__expenditure" class="form__expenditure">
+                  <div class="container__input__expenditure" id="container__input__expenditure__text" ></div>
+                  <div class="container__input__expenditure" id="container__input__expenditure__value" ></div>
+                  <button class="button__add__expenditure" id="button__add__expenditure" >Adicionar</button>
                 </form>
                 <div id="container__list__expenditure" class="container__list__expenditure" ></div>
             <footer id="contianer__footer__expenditure" class="contianer__footer__expenditure">
@@ -38,49 +36,100 @@ export const registerOfExpenses = () => {
 
 };
 
+let inputValue = document.createElement("input");
+let inputText = document.createElement("input");
+
 export const dynamicallyGenerateInput = () => {
-    let inputValue = document.createElement("input");
+
+    inputText.type = "text";
+    inputText.id = "title__item";
+    inputText.value = "";
+    inputText.placeholder = "Título da despesa...";
   
+    document.getElementById("container__input__expenditure__text").appendChild(inputText);
+
     inputValue.type = "text";
-    inputValue.id = "input__valor";
+    inputValue.id = "item__value";
     inputValue.value = "";
-    inputValue.className = "input__inserir__valor";
     inputValue.placeholder = "R$ 00,00";
-    inputValue.name = "valor";
-  
+
     inputValue.oninput = (event) => oninputEvent(event);
   
-    document.getElementById("container__input__expenditure").appendChild(inputValue);
+    document.getElementById("container__input__expenditure__value").appendChild(inputValue);
 };
 
 export const buttonTransaction = () => {
 
+  let arrayItens = [];
+
     document.getElementById('button__add__expenditure').addEventListener('click', (e) => {
       e.preventDefault();
+      
+      let itemTitle =  document.getElementById('title__item').value;
+      let itemValue =  document.getElementById('item__value').value;
+
+      //Verifica se foi informado um nome para a despesa;
+      if (!itemTitle) {
+        alert("É necessário informar o nome da despesa.")
+        return new Error("É necessário informar o nome da despesa.");
+      };
+
+      //Verifica se foi informado um valor para a despesa.
+      if (!itemValue) {
+        alert("É necessário informar o valor da despesa.")
+        return new Error("É necessário informar o valor da despesa.");
+      };
 
       let expenditureItem = document.createElement('div');
       expenditureItem.className = 'list__expenditure';
 
       let titleItem = document.createElement('h2');
-      titleItem.innerText = 'Contas de Luz';
+      titleItem.innerText = itemTitle;
 
       let valueItem = document.createElement('p');
-      valueItem.innerText = 'R$: 250,00';
+      valueItem.innerText = `R$ ${itemValue}`;
 
       let containerValueButons = document.createElement('div');
       containerValueButons.className = 'container__value__and__buttons__expenditure';
 
-      let buttonEdit = document.createElement('button');
       let buttonDelete = document.createElement('button');
+      buttonDelete.innerText = 'Deletar';
+      buttonDelete.id = 'button__delete';
+
+      buttonDelete.onclick = () => {
+        let paiButtonDelete = buttonDelete.parentNode;
+        let avoButtonDelete = paiButtonDelete.parentNode;
+        avoButtonDelete.parentNode.removeChild(avoButtonDelete);
+        arrayItens = arrayItens.filter(item => item.id !== parseInt(avoButtonDelete.id) - 1);
+        document.getElementById('quantidade__itens').innerText = `${arrayItens.length}`
+      };
 
       expenditureItem.appendChild(titleItem);
       expenditureItem.appendChild(valueItem);
-      expenditureItem.appendChild(containerValueButons);
-      containerValueButons.appendChild(buttonEdit);
+
       containerValueButons.appendChild(buttonDelete);
 
-      document.getElementById('container__list__expenditure').appendChild(expenditureItem);
+      expenditureItem.appendChild(containerValueButons);
+      
+      //Transforma de string em número com casas decimais
+      itemValue = parseFloat(itemValue.split(' ')[1].replace('.', '').replace(',','.'));
+
+      arrayItens.push({ nome: itemTitle, value: itemValue, id: arrayItens.length + 1 });
+
+      document.getElementById('quantidade__itens').innerText = `${arrayItens.length}`
+
+      expenditureItem.id = `${arrayItens.length + 1}`;
+
+      document.getElementById('container__list__expenditure').prepend(expenditureItem);
+      inputValue.value = '';
+      inputText.value = '';
     }); 
+
+    document.getElementById('button__clear').addEventListener('click', () => {
+      arrayItens = [];
+      document.getElementById('container__list__expenditure').innerHTML = '';
+      document.getElementById('quantidade__itens').innerText = `${arrayItens.length}`
+    });
 
     let transactionType = '';
 
@@ -104,8 +153,6 @@ export const buttonTransaction = () => {
     newButton.innerText = 'Salvar';
 
     newButton.onclick = () => {
-        console.log(transactionType)
-
       //Pega o valor do input para inserção de valores.
       let transactionValue = document.getElementById("input__valor").value
   
@@ -115,7 +162,7 @@ export const buttonTransaction = () => {
         return new Error("É necessário informar o valor da transação.");
       }
   
-      //Transforma de string em número com casas decimais
+      //Transforma de string em número com casas decimaisf
       transactionValue = parseFloat(transactionValue.split(' ')[1].replace('.', '').replace(',','.'));
   
       let endPoint = "";

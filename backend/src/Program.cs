@@ -1,5 +1,5 @@
-using Gestão_Financeira.Data;
-using Gestão_Financeira.Repositorio;
+using Gestï¿½o_Financeira.Data;
+using Gestï¿½o_Financeira.Repositorio;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 
