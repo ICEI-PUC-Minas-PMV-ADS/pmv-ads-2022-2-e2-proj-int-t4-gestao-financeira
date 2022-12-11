@@ -14,7 +14,7 @@ export const getaoSaldo = () => {
                 <div class="container__saldo" >
                     <p class="label__valor" >Saldo</p>
                     <h3 id="saldo__valor" >R$ ${
-                      novoSaldo ? novoSaldo : "0.000,00"
+                      novoSaldo ? novoSaldo : "0.850,00"
                     }</h3>
                 </div>
                 <div class="container__transacoes">
@@ -23,7 +23,7 @@ export const getaoSaldo = () => {
                         <div>
                             <p class="label__valor" >Valor Entrada</p>
                             <h3 id="valor__entrada" class="valor__entrada" >R$ ${
-                              novoSaldo ? novoSaldo : "0.000,00"
+                              novoSaldo ? novoSaldo : "1.850,00"
                             }</h3>
                         </div>
                     </div>
@@ -32,7 +32,7 @@ export const getaoSaldo = () => {
                         <div>
                             <p class="label__valor" >Valor Saída</p>
                             <h3 id="valor__saida" class="valor__saida" >R$ ${
-                              novoSaldo ? novoSaldo : "0.000,00"
+                              novoSaldo ? novoSaldo : "1.000,00"
                             }</h3>
                         </div>
                     </div>
@@ -208,6 +208,8 @@ export const buttonTransaction = () => {
       valor: transactionValue,
       tipoTransacao: transactionType,
     };
+
+    new CommunicateAPI(endPoint).post(body);
   };
 
   document.getElementById('container__adiciona__saldo').appendChild(newButton);

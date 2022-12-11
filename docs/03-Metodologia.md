@@ -22,7 +22,7 @@ A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para def
 A equipe está organizada da seguinte maneira:
 - Scrum Master: Thiago Almeida
 - Product Owner: Leonardo Jaques
-- Equipe de Desenvolvimento: Gabriel Alexandre; Pedro Freitas; Tássia Teixeira; Thiago Almeida e Vinícius Ottoni.
+- Equipe de Desenvolvimento: Pedro Freitas; Thiago Almeida e Leonardo Jaques.
 - Equipe de design: Thiago Almeida 
 
 

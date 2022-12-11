@@ -19,7 +19,7 @@ A publicação do site no Heroku é feita por meio de uma submissão do projeto 
 
 ### Diagrama de Caso de Uso
 
-> - [Diagrama de Caso de Uso](img/DiagramaCasoDeUso.jpg "Figura 9: Diagrama de Caso de Uso")
+> - [Diagrama de Caso de Uso](img/DiagramaCasoDeUso.jpg)
 
 ### Modelagem de Dados
 

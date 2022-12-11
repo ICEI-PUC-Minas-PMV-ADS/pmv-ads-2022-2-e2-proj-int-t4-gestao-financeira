@@ -12,7 +12,7 @@ export const registerOfExpenses = () => {
                     <p id="quantidade__itens" >0</p>
                 </div>
                 <div class="valor__total__expenditure" >
-                    <p>R$ 1.000,00</p>
+                    <p id="valor__total__expenditure" >R$ 0.000,00</p>
                 </div>
                 <div class="buttons__select__type__expenditure" >
                     <button id="botao__expenditure__variaveis" >Variáveis</button>
@@ -108,7 +108,8 @@ export const buttonTransaction = () => {
     titleItem.innerText = values.title;
 
     let valueItem = document.createElement('p');
-    valueItem.innerText = `R$ ${values.value}`;
+    valueItem.innerText = `R$ ${values.value},00`;
+    document.getElementById('valor__total__expenditure').innerText = `R$ 350,00`
 
     let containerValueButons = document.createElement('div');
     containerValueButons.className = 'container__value__and__buttons__expenditure';
